@@ -23,6 +23,19 @@
   @keyframes twSpin{to{transform:rotate(360deg)}}
   @keyframes twCue{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(9px);opacity:1}}
   @keyframes twPulse{0%,100%{opacity:.3}50%{opacity:1}}
+  /* phones & small tablets */
+  @media (max-width:879px){
+    #tw-hero{min-height:100vh !important;min-height:100svh !important;}
+    #tw-heroin{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:84px !important;}
+    #tw-title{font-size:clamp(48px,19.5vw,150px) !important;}
+    #tw-flourish{position:relative !important;left:auto !important;top:auto !important;display:block;margin:.5em 0 0 .2em;font-size:clamp(26px,8vw,44px) !important;}
+    #tw-now{display:none !important;}
+    #tw-selinner{padding:40px 0 70px !important;overflow:visible !important;}
+    #tw-track{flex-direction:column;align-items:stretch !important;gap:72px !important;}
+    #tw-track > div{max-width:none !important;padding-right:0 !important;}
+    .tw-slide{margin-top:0 !important;}
+    .tw-slideimg{width:100% !important;height:auto !important;max-width:100% !important;max-height:75vh;}
+  }
 </style>
 </helmet>
 
@@ -41,7 +54,7 @@
           <circle cx="75" cy="75" r="3" fill="var(--acc)"></circle>
         </svg>
       </div>
-      <div style="position:relative;z-index:2;padding:clamp(90px,14vh,150px) clamp(20px,6vw,110px) 0;">
+      <div id="tw-heroin" style="position:relative;z-index:2;padding:clamp(90px,14vh,150px) clamp(20px,6vw,110px) 0;">
         <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 clamp(18px,3vh,34px);">AN EXHIBITION IN THIRTEEN ROOMS</p>
         <div id="tw-titlewrap" style="position:relative;transform-style:preserve-3d;will-change:transform;">
           <h1 id="tw-title" aria-label="Kavita Jha" style="margin:0;font-family:'Archivo',sans-serif;font-weight:830;font-stretch:116%;line-height:.8;letter-spacing:-.035em;text-transform:uppercase;font-size:clamp(80px,17.5vw,296px);">
@@ -55,7 +68,7 @@
             <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.28em;color:#9A9080;">61 WORKS &#183; 13 MEDIUMS &#183; MUMBAI &#8594; BANGALORE</span>
             <span style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.26em;color:#9A9080;"><span style="animation:twCue 2.2s ease-in-out infinite;color:var(--acc);">&#9660;</span> SCROLL TO WALK THE CORRIDOR</span>
           </div>
-          <p data-rv data-rvd="300" style="margin:0;max-width:380px;font-size:14px;line-height:1.75;color:#B4AA99;">Watercolour to terracotta, hand-painted sarees to sand drawn in light &#8212; sixty-one works hung in one long corridor. Move your mouse. Then scroll.</p>
+          <p data-rv data-rvd="300" style="margin:0;max-width:380px;font-size:14px;line-height:1.75;color:#B4AA99;">Watercolour to terracotta, hand-painted sarees to sand drawn in light &#8212; sixty-one works hung in one long corridor. <span id="tw-herocue">Move your mouse. Then scroll.</span></p>
         </div>
       </div>
       <div data-marquee style="position:relative;z-index:2;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(237,229,214,.13);border-bottom:1px solid rgba(237,229,214,.13);padding:16px 0;">
@@ -106,7 +119,7 @@
             <div style="flex:none;max-width:min(84vw,560px);display:flex;flex-direction:column;gap:20px;">
               <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0;">SELECTED WORKS</p>
               <h2 data-split style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:clamp(44px,5.6vw,96px);line-height:.98;letter-spacing:-.01em;">Ten pieces, ten rooms.</h2>
-              <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:#9A9080;">KEEP SCROLLING &#8212; THE CORRIDOR TURNS SIDEWAYS &#8594;</p>
+              <p id="tw-selcue" style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:#9A9080;">KEEP SCROLLING &#8212; THE CORRIDOR TURNS SIDEWAYS &#8594;</p>
             </div>
             <sc-for list="{{ selected }}" as="art" hint-placeholder-count="10">
               <figure class="tw-slide" data-lb data-group="sel" data-slot="{{ art.slot }}" data-title="{{ art.title }}" data-meta="{{ art.meta }}" data-roomname="{{ art.room }}" data-acc="{{ art.accent }}" data-cursor="view" style="{{ art.figStyle }}">
@@ -556,15 +569,22 @@ class Component extends DCLogic {
         Array.from(node.childNodes).forEach((n) => {
           if (n.nodeType === 3) {
             const fragParent = document.createDocumentFragment();
-            for (const ch of n.textContent) {
-              if (ch.trim() === '') { fragParent.appendChild(document.createTextNode(ch)); continue; }
-              const mask = document.createElement('span');
-              mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.09em;margin-bottom:-.09em;';
-              const inner = document.createElement('span');
-              inner.style.cssText = 'display:inline-block;transform:translateY(115%);will-change:transform;';
-              inner.textContent = ch;
-              mask.appendChild(inner); fragParent.appendChild(mask); spans.push(inner);
-            }
+            // keep each word's letters together so lines only break between words
+            n.textContent.split(/(\s+)/).forEach((w) => {
+              if (!w) return;
+              if (w.trim() === '') { fragParent.appendChild(document.createTextNode(w)); return; }
+              const word = document.createElement('span');
+              word.style.cssText = 'display:inline-block;white-space:nowrap;';
+              for (const ch of w) {
+                const mask = document.createElement('span');
+                mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.09em;margin-bottom:-.09em;';
+                const inner = document.createElement('span');
+                inner.style.cssText = 'display:inline-block;transform:translateY(115%);will-change:transform;';
+                inner.textContent = ch;
+                mask.appendChild(inner); word.appendChild(mask); spans.push(inner);
+              }
+              fragParent.appendChild(word);
+            });
             n.parentNode.replaceChild(fragParent, n);
           } else if (n.nodeType === 1) process(n);
         });
@@ -973,6 +993,18 @@ class Component extends DCLogic {
       }
     };
     window.addEventListener('mousemove', this._onMove);
+    if (isTouch) {
+      // phones: dragging a finger over the cover leaves the same trail of artworks
+      const herocue = $('#tw-herocue'); if (herocue) herocue.textContent = 'Drag a finger across the cover. Then scroll.';
+      const selcue = $('#tw-selcue'); if (selcue) selcue.innerHTML = 'KEEP SCROLLING &#8595;';
+      const onTouch = (e) => {
+        const t = e.touches[0]; if (!t || menuOpen || lbOpen) return;
+        const dxT = t.clientX - lastTx, dyT = t.clientY - lastTy;
+        if (e.type === 'touchstart' || dxT * dxT + dyT * dyT > 6400) { lastTx = t.clientX; lastTy = t.clientY; spawnTrail(t.clientX, t.clientY); }
+      };
+      $('#tw-hero').addEventListener('touchstart', onTouch, { passive: true });
+      $('#tw-hero').addEventListener('touchmove', onTouch, { passive: true });
+    }
 
     // ---------- email underline / portrait ----------
     const email = $('#tw-email'), emailLine = $('#tw-emailline');
