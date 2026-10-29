@@ -30,11 +30,8 @@
     #tw-title{font-size:clamp(48px,19.5vw,150px) !important;}
     #tw-flourish{position:relative !important;left:auto !important;top:auto !important;display:block;margin:.5em 0 0 .2em;font-size:clamp(26px,8vw,44px) !important;}
     #tw-now{display:none !important;}
-    #tw-selinner{padding:40px 0 70px !important;overflow:visible !important;}
-    #tw-track{flex-direction:column;align-items:stretch !important;gap:72px !important;}
-    #tw-track > div{max-width:none !important;padding-right:0 !important;}
-    .tw-slide{margin-top:0 !important;}
-    .tw-slideimg{width:100% !important;height:auto !important;max-width:100% !important;max-height:75vh;}
+    #tw-track{gap:44px !important;}
+    .tw-slideimg{height:clamp(240px,50svh,520px) !important;max-width:78vw !important;}
   }
 </style>
 </helmet>
@@ -751,22 +748,22 @@ class Component extends DCLogic {
     const slides = $$('.tw-slide');
     if (!calm) { track.style.perspective = '1500px'; slides.forEach((sl) => { sl.style.willChange = 'transform'; }); }
     let selTop = 0, selExtra = 0, narrow = false;
+    // phones / native scrolling: pin with position:sticky instead of the smooth-scroll transform
+    const stickySel = !SMOOTH;
+    // the slides arrive sideways, so lazy-loading can leave them blank mid-swipe
+    if (stickySel) $$('.tw-slideimg').forEach((im) => { im.loading = 'eager'; });
     const measureSel = () => {
       narrow = vw < 880;
-      if (narrow || isTouch) {
-        selwrap.style.height = 'auto';
-        selinner.style.height = 'auto';
-        selinner.style.overflowX = 'auto';
-        selinner.style.padding = '60px 0';
-        track.style.transform = 'none';
-        selExtra = 0;
-        return;
-      }
       selinner.style.overflowX = 'hidden';
-      selinner.style.height = '100vh';
       selinner.style.padding = '0';
+      if (stickySel) {
+        selinner.style.position = 'sticky';
+        selinner.style.top = '0';
+        selinner.style.height = '100svh';
+        if (!CSS.supports('height', '100svh')) selinner.style.height = vh + 'px';
+      } else selinner.style.height = '100vh';
       selExtra = Math.max(0, track.scrollWidth - selinner.clientWidth);
-      selwrap.style.height = (vh + selExtra) + 'px';
+      selwrap.style.height = (selinner.offsetHeight + selExtra) + 'px';
       selTop = offTop(selwrap);
     };
 
@@ -996,7 +993,6 @@ class Component extends DCLogic {
     if (isTouch) {
       // phones: dragging a finger over the cover leaves the same trail of artworks
       const herocue = $('#tw-herocue'); if (herocue) herocue.textContent = 'Drag a finger across the cover. Then scroll.';
-      const selcue = $('#tw-selcue'); if (selcue) selcue.innerHTML = 'KEEP SCROLLING &#8595;';
       const onTouch = (e) => {
         const t = e.touches[0]; if (!t || menuOpen || lbOpen) return;
         const dxT = t.clientX - lastTx, dyT = t.clientY - lastTy;
@@ -1044,7 +1040,7 @@ class Component extends DCLogic {
       menuright.style.display = nrw ? 'none' : 'flex';
       badge.style.display = nrw ? 'none' : 'block';
       $$('.tw-rowtag').forEach((t) => { t.style.display = nrw ? 'none' : 'inline'; });
-      $('#tw-selhud').style.display = nrw || isTouch ? 'none' : 'block';
+      $('#tw-selhud').style.display = 'block';
       $('#tw-selbarwrap').style.display = nrw || isTouch ? 'none' : 'block';
       measureSel();
       syncSpacer();
@@ -1120,7 +1116,7 @@ class Component extends DCLogic {
       // selected pin
       if (selExtra > 0) {
         const y = clamp(cur - selTop, 0, selExtra);
-        selinner.style.transform = `translate3d(0,${y}px,0)`;
+        if (!stickySel) selinner.style.transform = `translate3d(0,${y}px,0)`;
         track.style.transform = `translate3d(${-y}px,0,0)`;
         const p = selExtra ? y / selExtra : 0;
         selbar.style.width = (p * 100) + '%';
