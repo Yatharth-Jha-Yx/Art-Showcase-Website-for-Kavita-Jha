@@ -1,462 +1,1192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kavita Jha — Art Showcase · Expressions in Every Medium</title>
-<meta name="description" content="The art of Kavita Jha — a journey through watercolour, terracotta, ceramics, hand-painted fabric, sand art, digital work and room-sized installations. Mumbai · Bangalore." />
-
-<!-- Open Graph (how the link looks when shared on WhatsApp / social) -->
-<meta property="og:title" content="Kavita Jha — Art Showcase" />
-<meta property="og:description" content="Expressions in Every Medium. A journey through the work, one medium at a time." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="images/dg-vaan-devi.jpg" />
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#0F0D0A;color:#EDE5D6;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  ::selection{background:#E0854A;color:#0F0D0A;}
+  html{scrollbar-width:thin;scrollbar-color:#2E2820 #0F0D0A;}
+  ::-webkit-scrollbar{width:9px;background:#0F0D0A;}
+  ::-webkit-scrollbar-thumb{background:#2E2820;border-radius:9px;}
+  a{color:inherit;text-decoration:none;}
+  @keyframes twSpin{to{transform:rotate(360deg)}}
+  @keyframes twCue{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(9px);opacity:1}}
+  @keyframes twPulse{0%,100%{opacity:.3}50%{opacity:1}}
+</style>
+</helmet>
 
-<body>
+<div class="tw-root" style="--acc:#E0854A;position:relative;width:100%;background:#0F0D0A;color:#EDE5D6;">
 
-<!-- ===== Intro loader ===== -->
-<div id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <span class="loader-eyebrow">Art Showcase</span>
-    <span class="loader-name">Kavita&nbsp;Jha</span>
-    <span class="loader-rule"></span>
-    <span class="loader-tag">Expressions in every medium</span>
+  <div id="tw-spacer" style="height:0;"></div>
+
+  <div id="tw-plane" style="position:relative;width:100%;will-change:transform;z-index:1;">
+
+    <section id="tw-hero" data-accent="#E0854A" data-name="COVER" data-num="00" data-screen-label="Hero" style="position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;">
+      <div id="tw-trail" style="position:absolute;inset:0;z-index:1;pointer-events:none;"></div>
+      <div id="tw-badge" style="position:absolute;top:clamp(78px,11vh,130px);right:clamp(22px,5vw,80px);z-index:3;opacity:.9;">
+        <svg width="150" height="150" viewBox="0 0 150 150" style="animation:twSpin 18s linear infinite;display:block;">
+          <defs><path id="twCirc" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"></path></defs>
+          <text style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.32em;fill:#9A9080;"><textPath href="#twCirc">THIRTEEN ROOMS &#10022; KAVITA JHA &#10022; EST. MUMBAI </textPath></text>
+          <circle cx="75" cy="75" r="3" fill="var(--acc)"></circle>
+        </svg>
+      </div>
+      <div style="position:relative;z-index:2;padding:clamp(90px,14vh,150px) clamp(20px,6vw,110px) 0;">
+        <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 clamp(18px,3vh,34px);">AN EXHIBITION IN THIRTEEN ROOMS</p>
+        <div id="tw-titlewrap" style="position:relative;transform-style:preserve-3d;will-change:transform;">
+          <h1 id="tw-title" aria-label="Kavita Jha" style="margin:0;font-family:'Archivo',sans-serif;font-weight:830;font-stretch:116%;line-height:.8;letter-spacing:-.035em;text-transform:uppercase;font-size:clamp(80px,17.5vw,296px);">
+            <span data-hline style="display:block;">KAVITA</span>
+            <span data-hline style="display:block;color:transparent;-webkit-text-stroke:2px #EDE5D6;">JHA</span>
+          </h1>
+          <span id="tw-flourish" data-rv data-rvd="500" data-rvt="rotate(-6deg) translateZ(60px)" style="position:absolute;left:min(42vw,560px);top:56%;z-index:3;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(26px,4.6vw,78px);color:var(--acc);transform:rotate(-6deg);pointer-events:none;white-space:nowrap;">one hand, every medium</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:26px 40px;margin:clamp(30px,6vh,64px) 0 clamp(28px,5vh,54px);">
+          <div data-rv data-rvd="150" style="display:flex;flex-direction:column;gap:10px;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.28em;color:#9A9080;">61 WORKS &#183; 13 MEDIUMS &#183; MUMBAI &#8594; BANGALORE</span>
+            <span style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.26em;color:#9A9080;"><span style="animation:twCue 2.2s ease-in-out infinite;color:var(--acc);">&#9660;</span> SCROLL TO WALK THE CORRIDOR</span>
+          </div>
+          <p data-rv data-rvd="300" style="margin:0;max-width:380px;font-size:14px;line-height:1.75;color:#B4AA99;">Watercolour to terracotta, hand-painted sarees to sand drawn in light &#8212; sixty-one works hung in one long corridor. Move your mouse. Then scroll.</p>
+        </div>
+      </div>
+      <div data-marquee style="position:relative;z-index:2;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(237,229,214,.13);border-bottom:1px solid rgba(237,229,214,.13);padding:16px 0;">
+        <div style="display:inline-flex;align-items:center;gap:3vw;will-change:transform;">
+          <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+            <span style="display:inline-flex;align-items:center;gap:3vw;">
+              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(26px,3.4vw,48px);line-height:1;">{{ m.name }}</span>
+              <span style="color:var(--acc);font-size:18px;">&#10022;</span>
+            </span>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section id="tw-manifesto" data-accent="#E0B054" data-name="OVERTURE" data-num="&#8212;" data-screen-label="Manifesto" style="position:relative;padding:clamp(130px,20vh,240px) clamp(20px,7vw,140px);max-width:1440px;margin:0 auto;">
+      <p id="tw-mani" data-words style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5.4vw,86px);line-height:1.14;letter-spacing:-.01em;">
+        Clay that <em style="font-style:italic;color:var(--acc);">remembers</em>. <img src="./images/ce-bunny-teapot.jpg" alt="Bunny teapot" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:1.333;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(237,229,214,.14);" /> cloth you can <em style="font-style:italic;color:var(--acc);">wear</em>. <img src="./images/fa-saree-lotus.jpg" alt="Painted saree" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:0.563;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(237,229,214,.14);" /> Sand gone by <em style="font-style:italic;color:var(--acc);">morning</em>, <img src="./images/sa-moon.jpg" alt="Sand drawing" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:1.333;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(237,229,214,.14);" /> and rooms you can step <em style="font-style:italic;color:var(--acc);">inside</em>.
+      </p>
+      <p data-rv data-rvd="200" style="margin:clamp(34px,6vh,60px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;color:#9A9080;">ONE ARTIST &#8212; THIRTEEN WAYS OF MAKING</p>
+    </section>
+
+    <section id="tw-artist" class="tw-2col" data-accent="#AECBB6" data-name="THE ARTIST" data-num="&#10022;" data-screen-label="The Artist" style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,96px);padding:clamp(80px,14vh,170px) clamp(20px,7vw,140px);max-width:1520px;margin:0 auto;align-items:center;">
+      <div>
+        <div data-rv data-cursor="view" style="position:relative;overflow:hidden;border-radius:4px;border:1px solid rgba(237,229,214,.12);background:#16130F;aspect-ratio:0.75;box-shadow:0 60px 120px -60px rgba(0,0,0,.85);">
+          <img id="tw-portrait" src="./images/artist-portrait.jpg" alt="Kavita Jha &#8212; artist portrait" loading="lazy" decoding="async" style="width:100%;height:118%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);transition:filter .8s ease;will-change:transform;" />
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.24em;color:#9A9080;">
+          <span>KAVITA JHA</span><span>THE ARTIST</span>
+        </div>
+      </div>
+      <div>
+        <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 26px;">01 &#8212; THE ARTIST</p>
+        <h2 data-split style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(32px,3.8vw,58px);line-height:1.14;margin:0 0 28px;letter-spacing:-.01em;">A hand that refuses to settle on a <em style="font-style:italic;color:var(--acc);">single material</em>.</h2>
+        <p data-rv data-rvd="100" style="font-size:clamp(14px,1.15vw,17px);line-height:1.8;color:#B4AA99;margin:0 0 18px;max-width:560px;">Watercolour and terracotta, glazed ceramics and hand-painted cloth, sand drawn in light, the digital tablet, and installations large enough to walk through &#8212; Kavita Jha&#8217;s work moves freely across all of them, held together by a recurring cast of faces, gods, fish and many watching eyes.</p>
+        <p data-rv data-rvd="200" style="font-size:clamp(14px,1.15vw,17px);line-height:1.8;color:#B4AA99;margin:0 0 36px;max-width:560px;">What follows is one long corridor through that body of work, medium by medium. Take it slowly.</p>
+        <div data-rv data-rvd="300" style="display:flex;flex-wrap:wrap;gap:22px 54px;border-top:1px solid rgba(237,229,214,.13);padding-top:26px;">
+          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">BASED IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;">Mumbai &amp; Bangalore</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">WORKING IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;">Every medium she can reach</span></div>
+        </div>
+        <a data-mag data-rv data-rvd="400" data-cursor="link" href="mailto:kavitajha1826@gmail.com" style="display:inline-flex;align-items:center;gap:12px;margin-top:36px;border:1px solid rgba(237,229,214,.22);border-radius:999px;padding:16px 30px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.28em;">WRITE TO KAVITA <span style="color:var(--acc);">&#8599;</span></a>
+      </div>
+    </section>
+
+    <section id="tw-selected" data-accent="#E7604E" data-name="SELECTED WORKS" data-num="&#10022;" data-screen-label="Selected Works" style="position:relative;">
+      <div id="tw-selwrap" style="position:relative;">
+        <div id="tw-selinner" style="position:relative;height:100vh;display:flex;align-items:center;overflow:hidden;">
+          <div id="tw-track" style="display:flex;align-items:center;gap:clamp(56px,8vw,140px);padding:0 clamp(20px,7vw,120px);will-change:transform;">
+            <div style="flex:none;max-width:min(84vw,560px);display:flex;flex-direction:column;gap:20px;">
+              <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0;">SELECTED WORKS</p>
+              <h2 data-split style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:clamp(44px,5.6vw,96px);line-height:.98;letter-spacing:-.01em;">Ten pieces, ten rooms.</h2>
+              <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:#9A9080;">KEEP SCROLLING &#8212; THE CORRIDOR TURNS SIDEWAYS &#8594;</p>
+            </div>
+            <sc-for list="{{ selected }}" as="art" hint-placeholder-count="10">
+              <figure class="tw-slide" data-lb data-group="sel" data-slot="{{ art.slot }}" data-title="{{ art.title }}" data-meta="{{ art.meta }}" data-roomname="{{ art.room }}" data-acc="{{ art.accent }}" data-cursor="view" style="{{ art.figStyle }}">
+                <span aria-hidden="true" style="{{ art.ghostStyle }}">{{ art.num }}</span>
+                <div style="position:relative;z-index:1;">
+                  <img class="tw-slideimg" src="./images/{{ art.slot }}.jpg" alt="{{ art.title }}" loading="lazy" decoding="async" style="{{ art.imgStyle }}" />
+                </div>
+                <figcaption style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 20px;margin-top:18px;">
+                  <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(19px,1.8vw,28px);">{{ art.title }}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#9A9080;text-transform:uppercase;">{{ art.meta }}</span>
+                  <span style="{{ art.chipStyle }}">{{ art.roomUpper }}</span>
+                </figcaption>
+              </figure>
+            </sc-for>
+            <div style="flex:none;max-width:min(84vw,520px);display:flex;flex-direction:column;align-items:flex-start;gap:26px;padding-right:clamp(20px,7vw,120px);">
+              <p style="margin:0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(32px,3.8vw,60px);line-height:1.05;">That was the short walk.</p>
+              <button id="tw-openrooms" data-mag data-cursor="link" style="background:none;border:1px solid rgba(237,229,214,.22);border-radius:999px;padding:16px 30px;color:inherit;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.28em;cursor:pointer;">OPEN THE TWELVE ROOMS <span style="color:var(--acc);">&#8595;</span></button>
+            </div>
+          </div>
+          <div id="tw-selhud" style="position:absolute;left:clamp(20px,7vw,120px);bottom:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;"><span id="tw-selidx" style="color:var(--acc);">01</span><span style="color:#9A9080;"> / 10</span></div>
+          <div id="tw-selbarwrap" style="position:absolute;right:clamp(20px,7vw,120px);bottom:31px;width:clamp(110px,17vw,300px);height:1px;background:rgba(237,229,214,.15);"><div id="tw-selbar" style="height:1px;width:0%;background:var(--acc);"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tw-rooms" data-accent="#E0854A" data-name="THE THIRTEEN ROOMS" data-num="&#10022;" data-screen-label="The Thirteen Rooms" style="position:relative;padding:clamp(120px,18vh,220px) clamp(20px,6vw,110px) clamp(60px,10vh,120px);max-width:1640px;margin:0 auto;">
+      <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 18px;">THE COLLECTION</p>
+      <h2 data-split style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:clamp(52px,9vw,150px);line-height:.95;letter-spacing:-.015em;">The Thirteen Rooms</h2>
+      <p data-rv data-rvd="150" style="margin:clamp(20px,3.5vh,34px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:#9A9080;">TAP A ROOM TO OPEN IT &#8212; EVERY WORK LIVES INSIDE</p>
+
+      <div style="margin-top:clamp(46px,8vh,90px);border-bottom:1px solid rgba(237,229,214,.13);">
+        <sc-for list="{{ rooms }}" as="room" hint-placeholder-count="12">
+          <div class="tw-row" data-accent="{{ room.accent }}" data-name="{{ room.nameUpper }}" data-num="{{ room.num }}" data-rid="{{ room.id }}" data-screen-label="{{ room.name }}">
+            <button class="tw-rowbtn" data-cursor="open" aria-expanded="false" style="position:relative;display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid rgba(237,229,214,.13);color:inherit;padding:0;cursor:pointer;font:inherit;">
+              <div class="tw-rowfill" style="position:absolute;inset:0;background:{{ room.accent }};transform:scaleY(0);transform-origin:bottom;transition:transform .5s cubic-bezier(.76,0,.24,1);"></div>
+              <div class="tw-rowin" style="position:relative;display:grid;grid-template-columns:clamp(44px,5vw,80px) 1fr auto;align-items:center;gap:clamp(12px,2.6vw,38px);padding:clamp(20px,3.2vh,36px) clamp(6px,1vw,16px);color:#EDE5D6;transition:color .35s ease;">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;opacity:.55;">{{ room.num }}</span>
+                <span style="display:flex;align-items:baseline;gap:clamp(14px,2.4vw,34px);min-width:0;">
+                  <span class="tw-rowname" style="font-family:'Instrument Serif',serif;font-size:clamp(34px,5.4vw,90px);line-height:1;letter-spacing:-.015em;transition:transform .5s cubic-bezier(.16,1,.3,1);white-space:nowrap;">{{ room.name }}</span>
+                  <span class="tw-rowtag" style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;opacity:.5;white-space:nowrap;">{{ room.tag }}</span>
+                </span>
+                <span style="display:flex;align-items:center;gap:clamp(12px,2vw,26px);">
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.2em;opacity:.55;white-space:nowrap;">{{ room.count }}</span>
+                  <span class="tw-rowplus" style="font-family:'Instrument Serif',serif;font-size:30px;line-height:1;transition:transform .5s cubic-bezier(.16,1,.3,1);display:inline-block;">+</span>
+                </span>
+              </div>
+            </button>
+            <div class="tw-panel" style="height:0;overflow:hidden;transition:height .8s cubic-bezier(.76,0,.24,1);">
+              <div style="padding:clamp(8px,1.6vh,20px) clamp(6px,1vw,16px) clamp(44px,7vh,80px);">
+                <p style="margin:0 0 clamp(26px,4vh,40px);font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:#C9BFAE;max-width:640px;">{{ room.desc }}</p>
+                <div class="tw-grid" style="column-width:300px;column-gap:clamp(18px,2.4vw,36px);">
+                  <sc-for list="{{ room.items }}" as="art" hint-placeholder-count="4">
+                    <figure class="tw-tile" data-rv data-rvd="{{ art.rvd }}" data-lb data-group="{{ room.id }}" data-slot="{{ art.slot }}" data-title="{{ art.title }}" data-meta="{{ art.meta }}" data-roomname="{{ room.name }}" data-acc="{{ room.accent }}" data-cursor="view" style="break-inside:avoid;margin:0 0 clamp(24px,3vw,42px);display:flex;flex-direction:column;gap:12px;">
+                      <div class="tw-tileframe" style="{{ art.frameStyle }}">
+                        <img src="./images/{{ art.slot }}.jpg" alt="{{ art.title }}" loading="lazy" decoding="async" style="{{ art.imgStyle }}" />
+                      </div>
+                      <figcaption style="display:flex;flex-direction:column;gap:4px;">
+                        <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:17px;line-height:1.25;">{{ art.title }}</span>
+                        <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;color:#9A9080;text-transform:uppercase;">{{ art.meta }}</span>
+                      </figcaption>
+                    </figure>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <footer id="tw-contact" data-accent="#E0854A" data-name="CONTACT" data-num="&#10022;" data-screen-label="Contact" style="position:relative;">
+      <div data-marquee style="overflow:hidden;white-space:nowrap;border-top:1px solid rgba(237,229,214,.13);border-bottom:1px solid rgba(237,229,214,.13);padding:16px 0;">
+        <div style="display:inline-flex;align-items:center;gap:3vw;will-change:transform;">
+          <sc-for list="{{ marquee2 }}" as="m" hint-placeholder-count="4">
+            <span style="display:inline-flex;align-items:center;gap:3vw;">
+              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(24px,3vw,42px);line-height:1;">{{ m.name }}</span>
+              <span style="color:var(--acc);font-size:16px;">&#10022;</span>
+            </span>
+          </sc-for>
+        </div>
+      </div>
+      <div style="padding:clamp(100px,16vh,200px) clamp(20px,7vw,140px) clamp(40px,6vh,70px);max-width:1520px;margin:0 auto;">
+        <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 22px;">GET IN TOUCH</p>
+        <h2 data-split style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(38px,6.6vw,112px);line-height:1.02;letter-spacing:-.015em;">Commissions, exhibitions &amp; <em style="font-style:italic;color:var(--acc);">workshops</em>.</h2>
+        <a id="tw-email" data-mag data-cursor="link" href="mailto:kavitajha1826@gmail.com" style="position:relative;display:inline-block;margin-top:clamp(40px,7vh,72px);font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%;font-size:clamp(21px,4.6vw,84px);letter-spacing:-.02em;line-height:1.05;text-transform:uppercase;word-break:break-word;">
+          KAVITAJHA1826@GMAIL.COM
+          <span id="tw-emailline" style="position:absolute;left:0;right:0;bottom:-10px;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.16,1,.3,1);display:block;"></span>
+        </a>
+        <div data-rv style="margin-top:clamp(60px,10vh,110px);border-top:1px solid rgba(237,229,214,.13);padding-top:clamp(30px,5vh,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px;align-items:start;">
+          <div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">ELSEWHERE</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="link" style-hover="color:var(--acc)" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;transition:color .3s ease;">linktr.ee/artsbykavitajha &#8599;</a></div>
+          <div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">BASED IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;">Mumbai &#183; Bangalore</span></div>
+          <div style="display:flex;flex-direction:column;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">EVERYTHING, ONE SCAN</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="view" style="display:block;width:112px;"><img src="./images/qr-linktree.jpg" alt="QR code &#8212; Kavita Jha's links" loading="lazy" style="width:100%;display:block;border-radius:6px;border:1px solid rgba(237,229,214,.16);" /></a></div>
+        </div>
+        <div style="margin-top:clamp(60px,9vh,100px);border-top:1px solid rgba(237,229,214,.13);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;color:#9A9080;">
+          <span>&#169; {{ year }} KAVITA JHA &#8212; ALL WORKS THE ARTIST&#8217;S OWN</span>
+          <span>SITE BY YATHARTH JHA</span>
+        </div>
+      </div>
+    </footer>
+
   </div>
+
+  <div id="tw-grain" style="position:fixed;inset:-60px;z-index:66;pointer-events:none;opacity:.07;"></div>
+
+  <header id="tw-topbar" style="position:fixed;top:0;left:0;right:0;z-index:72;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,3vw,44px);mix-blend-mode:difference;color:#EDE5D6;">
+    <button id="tw-mark" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;">KAVITA JHA &#10022; THIRTEEN ROOMS</button>
+    <button id="tw-menubtn" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;">MENU<span style="display:flex;flex-direction:column;gap:5px;"><span style="display:block;width:26px;height:1px;background:currentColor;"></span><span style="display:block;width:26px;height:1px;background:currentColor;"></span></span></button>
+  </header>
+
+  <div id="tw-progress" style="position:fixed;top:0;left:0;height:2px;width:0%;background:var(--acc);z-index:75;"></div>
+
+  <div id="tw-now" style="position:fixed;left:clamp(18px,3vw,44px);bottom:22px;z-index:70;display:flex;align-items:baseline;gap:12px;font-family:'IBM Plex Mono',monospace;transition:opacity .5s ease;">
+    <span id="tw-now-num" style="font-size:11px;color:var(--acc);letter-spacing:.14em;">00</span>
+    <span style="display:block;width:30px;height:1px;background:rgba(237,229,214,.25);"></span>
+    <span id="tw-now-name" style="font-size:9.5px;letter-spacing:.26em;color:#9A9080;">COVER</span>
+  </div>
+
+  <button id="tw-totop" data-mag data-cursor="link" aria-label="Back to top" style="position:fixed;right:clamp(18px,3vw,44px);bottom:20px;z-index:70;width:50px;height:50px;border-radius:50%;border:1px solid rgba(237,229,214,.22);background:rgba(15,13,10,.5);backdrop-filter:blur(8px);color:#EDE5D6;font-family:'Instrument Serif',serif;font-size:18px;cursor:pointer;opacity:0;transform:translateY(14px);transition:opacity .4s ease;">&#8593;</button>
+
+  <div id="tw-follow" style="position:fixed;top:0;left:0;z-index:68;width:min(300px,26vw);pointer-events:none;opacity:0;transform:translate(-50%,-56%) scale(.92) rotate(2deg);transition:opacity .25s ease;">
+    <div id="tw-follow-frame" style="overflow:hidden;border-radius:6px;border:1px solid rgba(237,229,214,.2);box-shadow:0 40px 90px -35px rgba(0,0,0,.9);aspect-ratio:1;background:#16130F;">
+      <img id="tw-follow-img" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
+    </div>
+  </div>
+
+  <div id="tw-menu" style="position:fixed;inset:0;z-index:90;background:rgba(12,10,7,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);clip-path:inset(0 0 100% 0);visibility:hidden;display:flex;flex-direction:column;padding:clamp(18px,3vw,44px);">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;color:#9A9080;">KAVITA JHA &#10022; THIRTEEN ROOMS</span>
+      <button id="tw-menuclose" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;">CLOSE &#10005;</button>
+    </div>
+    <div class="tw-2col" id="tw-menumid" style="flex:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,6vw,90px);align-items:center;min-height:0;">
+      <nav style="display:flex;flex-direction:column;gap:clamp(4px,1.4vh,12px);" aria-label="Site sections">
+        <sc-for list="{{ menuLinks }}" as="l" hint-placeholder-count="5">
+          <button class="tw-mlink" data-target="{{ l.target }}" data-preview="{{ l.preview }}" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;text-align:left;display:flex;align-items:baseline;gap:22px;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--acc);letter-spacing:.14em;">{{ l.num }}</span>
+            <span class="tw-mlabel" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(30px,5.4vh,58px);line-height:1.1;transition:transform .4s cubic-bezier(.16,1,.3,1),color .3s ease;display:inline-block;">{{ l.label }}</span>
+          </button>
+        </sc-for>
+      </nav>
+      <div id="tw-menuright" style="display:flex;flex-direction:column;gap:26px;min-height:0;">
+        <div style="overflow:hidden;border-radius:5px;border:1px solid rgba(237,229,214,.16);aspect-ratio:0.82;max-height:38vh;background:#16130F;">
+          <img id="tw-menuprev" src="./images/artist-portrait.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease,transform .6s ease;" />
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px 20px;">
+          <sc-for list="{{ rooms }}" as="room" hint-placeholder-count="12">
+            <button class="tw-mroom" data-rid="{{ room.id }}" data-cursor="link" style-hover="color:var(--acc)" style="background:none;border:none;padding:0;cursor:pointer;text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#9A9080;transition:color .25s ease;">{{ room.num }} &#8212; {{ room.nameUpper }}</button>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 30px;">
+      <a href="mailto:kavitajha1826@gmail.com" data-cursor="link" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:var(--acc);">KAVITAJHA1826@GMAIL.COM</a>
+      <a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="link" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:#9A9080;">LINKTR.EE/ARTSBYKAVITAJHA &#8599;</a>
+    </div>
+  </div>
+
+  <div id="tw-lb" style="position:fixed;inset:0;z-index:95;background:rgba(9,7,5,.96);opacity:0;visibility:hidden;transition:opacity .45s ease;display:flex;flex-direction:column;padding:clamp(14px,2.5vw,36px);">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;">
+      <span id="tw-lb-room" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--acc);">ROOM</span>
+      <span style="display:flex;align-items:center;gap:26px;">
+        <span id="tw-lb-count" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;color:#9A9080;">01 / 01</span>
+        <button id="tw-lb-close" data-cursor="link" aria-label="Close" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;font-family:'Instrument Serif',serif;font-size:28px;line-height:1;">&#10005;</button>
+      </span>
+    </div>
+    <div style="flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;padding:14px 0;">
+      <img id="tw-lb-img" alt="" style="max-width:min(88vw,1300px);max-height:100%;width:auto;height:auto;object-fit:contain;display:block;border-radius:3px;box-shadow:0 60px 130px -50px rgba(0,0,0,.95);" />
+      <button id="tw-lb-prev" data-cursor="link" aria-label="Previous work" style="position:absolute;left:2px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(237,229,214,.25);background:rgba(15,13,10,.55);color:#EDE5D6;font-family:'Instrument Serif',serif;font-size:26px;cursor:pointer;">&#8249;</button>
+      <button id="tw-lb-next" data-cursor="link" aria-label="Next work" style="position:absolute;right:2px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(237,229,214,.25);background:rgba(15,13,10,.55);color:#EDE5D6;font-family:'Instrument Serif',serif;font-size:26px;cursor:pointer;">&#8250;</button>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px 26px;">
+      <span id="tw-lb-title" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(18px,2.2vw,30px);">&#8212;</span>
+      <span id="tw-lb-meta" style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#9A9080;text-transform:uppercase;">&#8212;</span>
+    </div>
+  </div>
+
+  <div id="tw-cur-ring" style="position:fixed;top:0;left:0;width:34px;height:34px;border:1px solid var(--acc);border-radius:50%;z-index:100;pointer-events:none;opacity:0;display:flex;align-items:center;justify-content:center;background:transparent;transition:width .3s cubic-bezier(.16,1,.3,1),height .3s cubic-bezier(.16,1,.3,1),background-color .3s ease,opacity .3s ease;">
+    <span id="tw-cur-label" style="font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.24em;color:#0F0D0A;opacity:0;transition:opacity .2s ease;">VIEW</span>
+  </div>
+  <div id="tw-cur-dot" style="position:fixed;top:0;left:0;width:5px;height:5px;background:var(--acc);border-radius:50%;z-index:101;pointer-events:none;opacity:0;transition:opacity .3s ease;"></div>
+
+  <div id="tw-loader" style="position:fixed;inset:0;z-index:110;background:#0C0A08;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3.5vh,32px);">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.4em;color:#9A9080;animation:twPulse 2s ease-in-out infinite;">AN EXHIBITION IN THIRTEEN ROOMS</span>
+    <div id="tw-count" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(96px,19vw,210px);line-height:1;color:#EDE5D6;">0</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5em;color:#9A9080;">
+      <span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">K</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">A</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">V</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">I</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">T</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">A</span></span><span style="display:inline-block;width:.6em;"></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">J</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">H</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">A</span></span>
+    </div>
+    <div id="tw-loadbar" style="position:absolute;bottom:0;left:0;height:2px;width:0%;background:var(--acc);"></div>
+  </div>
+
 </div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showLoader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Intro&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full theatrics&quot;,&quot;calm&quot;],&quot;default&quot;:&quot;full theatrics&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;grain&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Texture&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const MONO = "'IBM Plex Mono',monospace";
+    const it = (slot, title, meta, r) => ({ slot, title, meta, r });
+    const ROOMS = [
+      { id: 'wc', name: 'Watercolour', tag: 'PIGMENT & WET PAPER', accent: '#9CC178',
+        desc: 'Pigment let loose on wet paper — woods, weathered houses and temple stone, each caught in a single breath.',
+        items: [
+          it('wc-woods', 'A Simple Scenic View of the Woods', 'Watercolour on paper · A3', 0.75),
+          it('wc-wooden-house', 'Wooden House, Countryside', 'Watercolour on paper · A3', 1.425),
+          it('wc-trimurti', 'Tri-Murti', 'Watercolour on paper · A3', 1.44),
+          it('wc-pachcha', 'Beauty of Pachcha', 'Watercolour on paper · A3', 0.75),
+          it('wc-temple-sculpture', 'Temple Interior', 'Painting on canvas', 1.333),
+          it('wc-temple-apsara', 'Temple Apsara', 'Watercolour on paper', 0.563),
+          it('wc-haveli', 'Haveli Street', 'Watercolour on paper', 1.333),
+          it('wc-colonial', 'Colonial Heritage', 'Watercolour on paper', 1.292),
+          it('wc-dussehra', 'Dussehra Durga', 'Watercolour on paper', 0.75),
+        ] },
+      { id: 'po', name: 'Portraits', tag: 'FACES IN TRANSLUCENT WASH', accent: '#AECBB6',
+        desc: 'Faces of Indian cinema and art, built from translucent washes and a few certain strokes.',
+        items: [
+          it('po-nana-patekar', 'Nana Patekar', 'Watercolour · Indian film actor', 0.892),
+          it('po-vidya-balan', 'Vidya Balan', 'Watercolour · Indian film actress', 0.708),
+          it('po-naseeruddin-shah', 'Naseeruddin Shah', 'Watercolour · Indian film actor', 0.75),
+          it('po-shyam-sharma', 'Shyam Sharma', 'Watercolour · printmaker & artist', 0.75),
+        ] },
+      { id: 'tc', name: 'Terracotta', tag: 'EARTH, SCORED & FIRED', accent: '#E0854A',
+        desc: 'Earth pressed, scored and fired — masks, idols, and a wall panel that seems to remember.',
+        items: [
+          it('tc-my-form', 'My Form', 'Terracotta relief · 80 × 30 cm', 1.614),
+          it('tc-tribal-mask', 'Tribal Mask', 'Terracotta · set of three', 1.333),
+          it('tc-sacred-idol', 'Sacred Idol', 'Terracotta · 30 × 30 × 20 cm', 1.333),
+          it('dg-mirror-horizon', 'Mirror Horizon', 'Terracotta', 0.75),
+        ] },
+      { id: 'ce', name: 'Ceramics', tag: 'GLAZE & KILN-HEAT', accent: '#59BEDB',
+        desc: 'Glaze and kiln-heat turned playful: tiles that echo Harappa, and teapots you can actually pour.',
+        items: [
+          it('ce-intimation', 'Essence of Intimation', 'Glazed ceramic', 1.022),
+          it('ce-harappa-tiles', 'Modern Harappa Tiles', 'Glazed ceramic tiles', 1.013),
+          it('ce-bunny-teapot', 'Bunny Tea-pot', 'Glazed ceramic · usable teapot', 1.333),
+          it('ce-camel-coaster', 'Camel-o-Coaster', 'Glazed ceramic · teapot & coaster', 1.333),
+        ] },
+      { id: 'fa', name: 'Fabric-a', tag: 'ART YOU CAN WEAR', accent: '#9AA8EC',
+        desc: 'The canvas becomes cloth — sarees and skirts painted by hand, made to be worn and walked in.',
+        items: [
+          it('fa-saree-deities', 'Painted Saree — Deities & Script', 'Hand-painted · saree', 0.748),
+          it('fa-skirt-procession', 'Painted Skirt — Village Procession', 'Hand-painted · skirt', 1.333),
+          it('fa-saree-lotus', 'Painted Saree — Lotus & Muse', 'Hand-painted · saree', 0.563),
+          it('fa-saree-tree', 'Painted Saree — Tree of Life', 'Hand-painted · saree', 1.333),
+        ] },
+      { id: 'sa', name: 'Sand Art', tag: 'DRAWN IN LIGHT', accent: '#5FCBE6',
+        desc: 'Drawn in light and loose grain — alive for a moment, then wiped away by the same hand that made it.',
+        items: [
+          it('sa-couple', 'The Sacred Couple', 'Sand on light table · live', 1.297),
+          it('sa-inprogress', 'In Performance', 'Sand on light table · live', 1.333),
+          it('sa-moon', 'Moonlit Figure', 'Sand on light table · live', 1.333),
+        ] },
+      { id: 'ab', name: 'Abstract', tag: 'FEELING, BEFORE IT SETTLES', accent: '#E77CA8',
+        desc: 'Crowded, contradictory and full of eyes — feeling given a shape before it has time to settle.',
+        items: [
+          it('ab-dismay', 'The Art of Dismay', 'Mixed media · A3', 1.068),
+          it('ab-crucifier', 'Crucifier', 'Mixed media · A3', 1),
+          it('ab-untitled', 'Sisters by the River', 'Mixed media · A3', 0.987),
+          it('ab-golden-greed', 'Golden Greed', 'Mixed media on canvas', 1.255),
+          it('ab-face-hand', 'Behind the Curtain', 'Mixed media on canvas', 1),
+        ] },
+      { id: 'ex', name: 'Exhibits', tag: 'THE LARGE STATEMENTS', accent: '#E0B054',
+        desc: 'The large statements — a Mumbai local, a national budget, gods on canvas. India read back to itself.',
+        items: [
+          it('ex-mumbai-local', 'Grievance of God in Mumbai Local', 'Exhibited work', 1.9),
+          it('ex-india-budget', 'India Budget', 'Exhibited work', 0.987),
+          it('ex-tribal', 'Tribal', 'Exhibited work', 0.751),
+          it('ex-puppets', 'The Puppeteers', 'Acrylic on canvas', 1.057),
+          it('ex-chess', 'The Grand Game', 'Acrylic on canvas', 1.274),
+          it('va-lion', 'Durga on Simha', 'Acrylic on canvas', 1.007),
+          it('va-durga', 'The Warrior Goddess', 'Acrylic on canvas', 0.995),
+          it('va-parrot-cart', 'Parrot & the Chariot', 'Acrylic on canvas', 1.034),
+          it('va-deity-deer', 'The Golden Deer', 'Acrylic on canvas', 1),
+          it('va-saraswati', 'Saraswati & Hamsa', 'Acrylic on canvas', 1.026),
+          it('va-swan-lotus', 'Swan among Lotuses', 'Acrylic on canvas', 0.994),
+        ] },
+      { id: 'st', name: 'Stage Décor', tag: 'WORLDS BUILT OVERNIGHT', accent: '#EFA2B4',
+        desc: 'Whole worlds built to be stood inside — Greek columns, a silver anniversary, a goddess of wisdom.',
+        items: [
+          it('st-athena', 'Athena 2020', 'Stage décor', 1.333),
+          it('st-25th', '25th Anniversary', 'Stage décor', 1.497),
+          it('st-greek', 'Greek', 'Stage décor', 1.333),
+          it('st-vistas', 'Vistas of Career', 'Stage décor', 1.333),
+        ] },
+      { id: 'ls', name: 'Live Size', tag: 'ART YOU WALK THROUGH', accent: '#EE9C4F',
+        desc: "Art you walk through — a tiger's open jaws, a hand holding a lit idea, the weight of space.",
+        items: [
+          it('ls-gen-exhibit', 'Gen. Exhibit', 'Floor installation', 1.777),
+          it('ls-tiger', 'Tiger', 'Walk-through installation', 1.333),
+          it('ls-space', 'Space', 'Floor installation', 1.777),
+          it('ls-nirmaan', 'Nirmaan', 'Light installation', 1.333),
+        ] },
+      { id: 'dg', name: 'Digital Art', tag: 'THE NEWEST ROOM', accent: '#E7604E',
+        desc: 'The newest room. Drawn on an iPad — the old motifs return in electric colour.',
+        items: [
+          it('dg-eye-for-an-eye', 'Eye for an Eye', 'Digital · iPad', 0.984),
+          it('dg-ram-bhakt', 'Ram Bhakt', 'Digital · iPad', 0.698),
+          it('dg-vaan-devi', 'Vaan Devi', 'Digital · iPad', 1),
+          it('tc-stare', 'Stare of Astonishment', 'Digital · iPad', 0.699),
+        ] },
+      { id: 'dw', name: 'Drawing', tag: 'PEN, INK & LINE', accent: '#B79FE3',
+        desc: 'Pen and ink, line answering line — nine deities built from a single unbroken stroke.',
+        items: [
+          it('dg-deities-bw', 'Nine Deities', 'Pen & ink on paper · nine studies', 1),
+        ] },
+      { id: 'ws', name: 'Workshops', tag: 'PASSING THE BRUSH', accent: '#E9C468',
+        desc: "And the part that outlasts any single piece — putting the brush into someone else's hand.",
+        items: [
+          it('ws-1', 'Young Artists', 'Workshop', 1.9),
+          it('ws-2', 'On the Studio Floor', 'Workshop', 1.333),
+          it('ws-3', 'A First Tile', 'Terracotta workshop', 0.75),
+          it('ws-4', 'T-shirt Painting', 'Workshop', 0.563),
+        ] },
+    ];
+    const rooms = ROOMS.map((r, i) => ({
+      ...r,
+      idx: i,
+      num: String(i + 1).padStart(2, '0'),
+      nameUpper: r.name.toUpperCase(),
+      count: r.items.length + ' WORKS',
+      items: r.items.map((a, j) => {
+        const tr = Math.min(1.75, Math.max(0.55, a.r));
+        return {
+          ...a,
+          rvd: String((j % 6) * 70),
+          frameStyle: { position: 'relative', overflow: 'hidden', borderRadius: '3px', background: '#16130F', border: '1px solid rgba(237,229,214,.12)', aspectRatio: String(tr), transition: 'border-color .5s ease' },
+          imgStyle: { width: '100%', height: '100%', objectFit: 'contain', display: 'block', transition: 'transform 1.1s cubic-bezier(.16,1,.3,1)', willChange: 'transform' },
+        };
+      }),
+    }));
+    this._rooms = rooms;
+    const SEL = [
+      ['ex-mumbai-local', 'Grievance of God in Mumbai Local', 'Acrylic · exhibited work', 'Exhibits', '#E0B054', 2.166],
+      ['tc-stare', 'Stare of Astonishment', 'Digital · iPad', 'Digital Art', '#E7604E', 0.699],
+      ['va-saraswati', 'Saraswati & Hamsa', 'Acrylic on canvas', 'Exhibits', '#E0B054', 1.026],
+      ['wc-trimurti', 'Tri-Murti', 'Watercolour on paper', 'Watercolour', '#9CC178', 1.44],
+      ['fa-saree-deities', 'Painted Saree — Deities & Script', 'Hand-painted saree', 'Fabric-a', '#9AA8EC', 0.748],
+      ['sa-couple', 'The Sacred Couple', 'Sand on light table', 'Sand Art', '#5FCBE6', 1.297],
+      ['ab-dismay', 'The Art of Dismay', 'Mixed media on paper', 'Abstract', '#E77CA8', 1.068],
+      ['ls-tiger', 'Tiger', 'Walk-through installation', 'Live Size', '#EE9C4F', 1.333],
+      ['po-nana-patekar', 'Nana Patekar', 'Watercolour portrait', 'Portraits', '#AECBB6', 0.892],
+      ['dg-eye-for-an-eye', 'Eye for an Eye', 'Digital · drawn on iPad', 'Digital Art', '#E7604E', 0.984],
+    ];
+    const selected = SEL.map(([slot, title, meta, room, accent, r], i) => ({
+      slot, title, meta, room, accent,
+      roomUpper: room.toUpperCase(),
+      num: String(i + 1).padStart(2, '0'),
+      figStyle: { position: 'relative', flex: 'none', display: 'flex', flexDirection: 'column', marginTop: i % 2 ? '7vh' : '-5vh', cursor: 'pointer' },
+      ghostStyle: { position: 'absolute', top: 'clamp(-88px,-6.5vw,-34px)', left: '-0.04em', fontFamily: "'Instrument Serif',serif", fontStyle: 'italic', fontSize: 'clamp(66px,8.4vw,150px)', lineHeight: 1, color: accent, opacity: 0.3, zIndex: 0, pointerEvents: 'none' },
+      imgStyle: { height: 'clamp(280px,56vh,620px)', aspectRatio: String(r), width: 'auto', maxWidth: '80vw', objectFit: 'contain', display: 'block', borderRadius: '3px', boxShadow: '0 50px 110px -55px rgba(0,0,0,.9)' },
+      chipStyle: { fontFamily: MONO, fontSize: '9px', letterSpacing: '.22em', padding: '6px 12px', border: '1px solid ' + accent, color: accent, borderRadius: '999px', whiteSpace: 'nowrap' },
+    }));
+    const menuLinks = [
+      { num: '00', label: 'Overture', target: 'tw-hero', preview: 'ex-mumbai-local' },
+      { num: '01', label: 'The Artist', target: 'tw-artist', preview: 'artist-portrait' },
+      { num: '02', label: 'Selected Works', target: 'tw-selected', preview: 'va-saraswati' },
+      { num: '03', label: 'The Thirteen Rooms', target: 'tw-rooms', preview: 'tc-stare' },
+      { num: '04', label: 'Contact', target: 'tw-contact', preview: 'ws-1' },
+    ];
+    return {
+      rooms, selected, menuLinks,
+      marquee: rooms.map(r => ({ name: r.name })),
+      marquee2: [{ name: 'Commissions' }, { name: 'Exhibitions' }, { name: 'Workshops' }, { name: 'Sand performances' }],
+      year: 2026,
+    };
+  }
 
-<!-- ===== Custom cursor (hidden on touch devices) ===== -->
-<div id="cursor-ring" aria-hidden="true"></div>
-<div id="cursor-dot" aria-hidden="true"></div>
+  componentDidMount() { this._raf = 0; setTimeout(() => this.init(), 0); }
+  componentWillUnmount() {
+    cancelAnimationFrame(this._raf);
+    if (this._grainInt) clearInterval(this._grainInt);
+    if (this._ro) this._ro.disconnect();
+    ['mousemove', 'resize', 'keydown'].forEach((n, i) => {
+      const h = [this._onMove, this._onResize, this._onKey][i];
+      if (h) window.removeEventListener(n, h);
+    });
+  }
 
-<!-- ===== Left "journey through time" rail ===== -->
-<nav class="rail" aria-label="Jump to a chapter">
-  <div class="rail-track"><span class="rail-fill" id="railFill"></span></div>
-  <ul class="rail-dots" id="railDots"></ul>
-</nav>
+  hexToRgb(h) { const n = parseInt(h.slice(1), 16); return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 }; }
 
-<!-- floating chapter indicator -->
-<div class="now-showing" id="nowShowing" aria-hidden="true">
-  <span class="now-num" id="nowNum">—</span>
-  <span class="now-name" id="nowName">Welcome</span>
-</div>
+  init() {
+    const root = document.querySelector('.tw-root');
+    if (!root || this._inited) return;
+    this._inited = true;
+    const $ = (s) => root.querySelector(s);
+    const $$ = (s) => Array.from(root.querySelectorAll(s));
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    const calm = (this.props.motion ?? 'full theatrics') === 'calm' || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const SMOOTH = !isTouch && !calm;
+    const EXPO = 'cubic-bezier(.16,1,.3,1)';
+    let vw = window.innerWidth, vh = window.innerHeight;
+    let cur = window.scrollY, mx = vw / 2, my = vh / 2, frame = 0, lastY = cur;
 
-<!-- skip link for keyboard users -->
-<a href="#about" class="skip-link">Skip to content</a>
+    // ---------- accent ----------
+    let accCur = this.hexToRgb('#E0854A'), accTar = { ...accCur };
+    const setAcc = () => root.style.setProperty('--acc', `rgb(${accCur.r | 0},${accCur.g | 0},${accCur.b | 0})`);
+    setAcc();
 
-<!-- ===== HERO ===== -->
-<header class="hero" id="top" data-accent="#c0392b" data-name="Cover" data-num="—">
-  <div class="hero-bg" style="background-image:url('images/hero-digital.jpg')"></div>
-  <div class="hero-scrim"></div>
-  <div class="hero-grain"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Every medium · Mumbai &nbsp;→&nbsp; Bangalore</p>
-    <h1 class="hero-title">Kavita<br /><em>Jha</em></h1>
-    <p class="hero-sub">A journey through art &amp; craft — one medium at a time.</p>
-  </div>
-  <div class="scroll-cue" aria-hidden="true">
-    <span>Scroll through the work</span>
-    <span class="cue-line"></span>
-  </div>
-</header>
+    // ---------- scroll plane ----------
+    const plane = $('#tw-plane'), spacer = $('#tw-spacer');
+    if (SMOOTH) {
+      plane.style.position = 'fixed';
+      plane.style.top = '0'; plane.style.left = '0'; plane.style.right = '0';
+    }
+    const syncSpacer = () => { if (SMOOTH) spacer.style.height = plane.offsetHeight + 'px'; };
+    const offTop = (el) => el.getBoundingClientRect().top + cur;
 
-<main>
+    // ---------- custom cursor ----------
+    const ring = $('#tw-cur-ring'), dot = $('#tw-cur-dot'), curLabel = $('#tw-cur-label');
+    let rx = mx, ry = my;
+    if (!isTouch) {
+      const st = document.createElement('style');
+      st.textContent = '.tw-root,.tw-root *{cursor:none !important}';
+      document.head.appendChild(st);
+      document.addEventListener('mouseover', (e) => {
+        const hit = e.target.closest && e.target.closest('[data-cursor],a,button');
+        const kind = hit && hit.getAttribute ? (hit.getAttribute('data-cursor') || 'link') : null;
+        if (kind === 'view' || kind === 'open') {
+          ring.style.width = '72px'; ring.style.height = '72px';
+          ring.style.backgroundColor = 'rgba(237,229,214,.92)';
+          curLabel.textContent = kind === 'view' ? 'VIEW' : 'OPEN';
+          curLabel.style.opacity = '1';
+        } else if (kind) {
+          ring.style.width = '52px'; ring.style.height = '52px';
+          ring.style.backgroundColor = 'transparent'; curLabel.style.opacity = '0';
+        } else {
+          ring.style.width = '34px'; ring.style.height = '34px';
+          ring.style.backgroundColor = 'transparent'; curLabel.style.opacity = '0';
+        }
+      });
+    } else { ring.style.display = 'none'; dot.style.display = 'none'; }
 
-  <!-- ===== ABOUT ===== -->
-  <section class="about" id="about" data-accent="#4f7a4a" data-name="The Artist" data-num="·">
-    <div class="about-photo">
-      <img src="images/artist-portrait.jpg" alt="Kavita Jha painting a tree at her easel, in a yellow outfit" loading="lazy" />
-    </div>
-    <div class="about-text">
-      <p class="eyebrow">About the artist</p>
-      <p class="lede">Kavita Jha is a Mumbai-born artist who refuses to settle on a single material.</p>
-      <p>Watercolour and terracotta, glazed ceramics and hand-painted cloth, sand drawn in light, the digital tablet, and installations large enough to walk through — the work moves freely across all of them, held together by a recurring cast of faces, gods, fish and many watching eyes.</p>
-      <p>What follows is a journey through that body of work, grouped by medium. Take it slowly, top to bottom.</p>
-      <ul class="about-meta">
-        <li><span>Based in</span> Mumbai &amp; Bangalore</li>
-        <li><span>Working in</span> All mediums</li>
-        <li><span>Reach</span> <a href="mailto:kavitajha1826@gmail.com">kavitajha1826@gmail.com</a></li>
-      </ul>
-    </div>
-  </section>
+    // ---------- grain ----------
+    if (this.props.grain !== false) {
+      const gc = document.createElement('canvas'); gc.width = 160; gc.height = 160;
+      const gctx = gc.getContext('2d'); const id = gctx.createImageData(160, 160);
+      for (let i = 0; i < id.data.length; i += 4) { const v = Math.random() * 255; id.data[i] = v; id.data[i + 1] = v; id.data[i + 2] = v; id.data[i + 3] = 22; }
+      gctx.putImageData(id, 0, 0);
+      const grain = $('#tw-grain');
+      grain.style.backgroundImage = `url(${gc.toDataURL()})`;
+      this._grainInt = setInterval(() => { grain.style.backgroundPosition = `${(Math.random() * 160) | 0}px ${(Math.random() * 160) | 0}px`; }, 90);
+    }
 
-  <!-- ===== CHAPTER I · WATERCOLOUR ===== -->
-  <section class="chapter" id="ch-watercolour" data-accent="#4f7a4a" data-name="Watercolour" data-num="I">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">I</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter I</p>
-        <h2 class="ch-title"><em>Watercolour</em></h2>
-        <p class="ch-desc">Pigment let loose on wet paper — woods, weathered houses and temple stone, each caught in a single breath.</p>
-      </div>
-    </div>
-    <div class="gallery mat-paper">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/wc-woods.jpg" alt="Watercolour of a wooden cabin among green and autumn-orange trees" loading="lazy" /></div>
-        <figcaption><span class="art-title">A Simple Scenic View of the Woods</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/wc-wooden-house.jpg" alt="Watercolour of a tall wooden house on stilts in the countryside" loading="lazy" /></div>
-        <figcaption><span class="art-title">Wooden House, Countryside</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/wc-trimurti.jpg" alt="Watercolour of carved stone temple faces among trees, in the Bayon style" loading="lazy" /></div>
-        <figcaption><span class="art-title">Tri-Murti</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/wc-pachcha.jpg" alt="Watercolour of a green Kathakali Pachcha face in vivid colour" loading="lazy" /></div>
-        <figcaption><span class="art-title">Beauty of Pachcha</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- split text ----------
+    const pendingSplits = [];
+    const splitChars = (el) => {
+      const spans = [];
+      const process = (node) => {
+        Array.from(node.childNodes).forEach((n) => {
+          if (n.nodeType === 3) {
+            const fragParent = document.createDocumentFragment();
+            for (const ch of n.textContent) {
+              if (ch.trim() === '') { fragParent.appendChild(document.createTextNode(ch)); continue; }
+              const mask = document.createElement('span');
+              mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.09em;margin-bottom:-.09em;';
+              const inner = document.createElement('span');
+              inner.style.cssText = 'display:inline-block;transform:translateY(115%);will-change:transform;';
+              inner.textContent = ch;
+              mask.appendChild(inner); fragParent.appendChild(mask); spans.push(inner);
+            }
+            n.parentNode.replaceChild(fragParent, n);
+          } else if (n.nodeType === 1) process(n);
+        });
+      };
+      process(el);
+      el._spans = spans; el._step = 16;
+      pendingSplits.push(el);
+    };
+    const splitWords = (el) => {
+      const spans = [];
+      const wrapToken = (tok) => {
+        const mask = document.createElement('span');
+        mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.1em;margin-bottom:-.1em;';
+        const inner = document.createElement('span');
+        inner.style.cssText = 'display:inline-block;transform:translateY(112%);will-change:transform;';
+        inner.appendChild(tok); mask.appendChild(inner); spans.push(inner);
+        return mask;
+      };
+      Array.from(el.childNodes).forEach((n) => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach((w) => {
+            if (!w) return;
+            if (w.trim() === '') { frag.appendChild(document.createTextNode(' ')); return; }
+            frag.appendChild(wrapToken(document.createTextNode(w)));
+          });
+          el.replaceChild(frag, n);
+        } else if (n.nodeType === 1) {
+          const mask = wrapToken(n.cloneNode(true));
+          el.replaceChild(mask, n);
+        }
+      });
+      el._spans = spans; el._step = 42;
+      pendingSplits.push(el);
+    };
+    const revealSplit = (el) => {
+      el._spans.forEach((s, i) => {
+        s.style.transition = `transform 1s ${EXPO} ${i * el._step}ms`;
+        s.style.transform = 'translateY(0)';
+      });
+    };
+    if (!calm) {
+      $$('[data-split]').forEach(splitChars);
+      const mani = $('#tw-mani'); if (mani) splitWords(mani);
+    }
 
-  <!-- ===== CHAPTER II · PORTRAITS ===== -->
-  <section class="chapter" id="ch-portraits" data-accent="#6e7b74" data-name="Portraits" data-num="II">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">II</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter II</p>
-        <h2 class="ch-title"><em>Portraits</em></h2>
-        <p class="ch-desc">Faces of Indian cinema and art, built from translucent washes and a few certain strokes.</p>
-      </div>
-    </div>
-    <div class="gallery mat-paper">
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/po-nana-patekar.jpg" alt="Watercolour portrait of actor Nana Patekar" loading="lazy" /></div>
-        <figcaption><span class="art-title">Nana Patekar</span><span class="art-meta">Watercolour on paper · Indian film actor</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/po-vidya-balan.jpg" alt="Watercolour portrait of actress Vidya Balan, smiling" loading="lazy" /></div>
-        <figcaption><span class="art-title">Vidya Balan</span><span class="art-meta">Watercolour on paper · Indian film actress</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/po-naseeruddin-shah.jpg" alt="Watercolour portrait of actor Naseeruddin Shah" loading="lazy" /></div>
-        <figcaption><span class="art-title">Naseeruddin Shah</span><span class="art-meta">Watercolour on paper · Indian film actor</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/po-shyam-sharma.jpg" alt="Watercolour portrait of artist Shyam Sharma with glasses and white beard" loading="lazy" /></div>
-        <figcaption><span class="art-title">Shyam Sharma</span><span class="art-meta">Watercolour on paper · Indian printmaker &amp; artist</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- reveals ----------
+    let pendingRv = [];
+    if (!calm) {
+      pendingRv = $$('[data-rv]');
+      pendingRv.forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px) ' + (el.getAttribute('data-rvt') || '');
+      });
+    }
+    const revealEl = (el) => {
+      const d = parseInt(el.getAttribute('data-rvd') || '0', 10);
+      el.style.transition = `opacity .9s ease ${d}ms, transform 1.1s ${EXPO} ${d}ms`;
+      el.style.opacity = '1'; el.style.transform = 'translateY(0) ' + (el.getAttribute('data-rvt') || '');
+    };
+    setTimeout(() => { pendingRv.forEach(revealEl); pendingRv = []; pendingSplits.forEach(revealSplit); pendingSplits.length = 0; }, 5000);
 
-  <!-- ===== CHAPTER III · TERRACOTTA ===== -->
-  <section class="chapter" id="ch-terracotta" data-accent="#b0552f" data-name="Terracotta" data-num="III">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">III</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter III</p>
-        <h2 class="ch-title"><em>Terracotta</em></h2>
-        <p class="ch-desc">Earth pressed, scored and fired — masks, idols, and a wall panel that seems to remember.</p>
-      </div>
-    </div>
-    <div class="gallery mat-dark">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/tc-my-form.jpg" alt="Long terracotta relief panel carved with faces, fish and motifs" loading="lazy" /></div>
-        <figcaption><span class="art-title">My Form</span><span class="art-meta">Terracotta relief · 80 × 30 × 3 cm</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/tc-tribal-mask.jpg" alt="Three terracotta tribal masks with incised patterns" loading="lazy" /></div>
-        <figcaption><span class="art-title">Tribal Mask</span><span class="art-meta">Terracotta · set of three · 20 × 10 × 3.1 cm</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/tc-stare.jpg" alt="Terracotta head with an astonished expression" loading="lazy" /></div>
-        <figcaption><span class="art-title">Stare of Astonishment</span><span class="art-meta">Terracotta · 53.3 × 27.9 × 34 cm</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/tc-sacred-idol.jpg" alt="Detailed terracotta idol of Ganesha" loading="lazy" /></div>
-        <figcaption><span class="art-title">Sacred Idol</span><span class="art-meta">Terracotta · 30 × 30 × 20 cm</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- hero title ----------
+    const heroLetters = [];
+    $$('#tw-title [data-hline]').forEach((line) => {
+      const txt = line.textContent; line.textContent = '';
+      for (const ch of txt) {
+        const s = document.createElement('span');
+        s.style.cssText = 'display:inline-block;will-change:transform;';
+        s.textContent = ch;
+        if (!calm) { s.style.opacity = '0'; s.style.transform = 'translateY(.35em) rotate(5deg)'; }
+        line.appendChild(s);
+        heroLetters.push({ el: s, cx: 0, cy: 0, y: 0, r: 0 });
+      }
+    });
+    let kinetic = calm;
+    const measureLetters = () => { heroLetters.forEach((L) => { const r = L.el.getBoundingClientRect(); L.cx = r.left + r.width / 2; L.cy = r.top + r.height / 2 + cur; }); };
+    const introHero = () => {
+      heroLetters.forEach((L, i) => {
+        L.el.style.transition = `opacity .7s ease ${i * 42}ms, transform .9s ${EXPO} ${i * 42}ms`;
+        L.el.style.opacity = '1'; L.el.style.transform = 'translateY(0) rotate(0deg)';
+      });
+      setTimeout(() => { heroLetters.forEach((L) => { L.el.style.transition = 'none'; }); measureLetters(); kinetic = true; }, 1500);
+    };
 
-  <!-- ===== CHAPTER IV · CERAMICS ===== -->
-  <section class="chapter" id="ch-ceramics" data-accent="#1f6b7a" data-name="Ceramics" data-num="IV">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">IV</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter IV</p>
-        <h2 class="ch-title"><em>Ceramics</em></h2>
-        <p class="ch-desc">Glaze and kiln-heat turned playful: tiles that echo Harappa, and teapots you can actually pour.</p>
-      </div>
-    </div>
-    <div class="gallery mat-dark">
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/ce-intimation.jpg" alt="Two blue glazed ceramic figures embracing" loading="lazy" /></div>
-        <figcaption><span class="art-title">Essence of Intimation</span><span class="art-meta">Glazed ceramic · 8 × 6 × 6 cm</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/ce-harappa-tiles.jpg" alt="Blue and teal glazed ceramic tile in the style of a Harappan face" loading="lazy" /></div>
-        <figcaption><span class="art-title">Modern Harappa Tiles</span><span class="art-meta">Glazed ceramic tiles · 5 × 5 × 3 cm each</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/ce-bunny-teapot.jpg" alt="Red glazed ceramic teapot shaped like a rabbit" loading="lazy" /></div>
-        <figcaption><span class="art-title">Bunny Tea-pot</span><span class="art-meta">Glazed ceramic · usable teapot · 15.2 × 17.8 × 13 cm</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/ce-camel-coaster.jpg" alt="Camel-shaped ceramic teapot beside a round green coaster" loading="lazy" /></div>
-        <figcaption><span class="art-title">Camel-o-Coaster</span><span class="art-meta">Glazed ceramic · teapot &amp; coaster · 15.2 × 17.8 × 13 cm</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- loader ----------
+    const loader = $('#tw-loader');
+    const finishIntro = () => {
+      document.documentElement.style.overflow = '';
+      introHero();
+      // reveal hero rv elements right away
+      $$('#tw-hero [data-rv]').forEach((el) => { const i = pendingRv.indexOf(el); if (i > -1) { pendingRv.splice(i, 1); revealEl(el); } });
+    };
+    if (this.props.showLoader !== false && !calm) {
+      document.documentElement.style.overflow = 'hidden';
+      const count = $('#tw-count'), bar = $('#tw-loadbar');
+      const t0 = performance.now(), dur = 1750;
+      let namesShown = false;
+      const lt = () => {
+        const p = clamp((performance.now() - t0) / dur, 0, 1);
+        const e = 1 - Math.pow(1 - p, 3);
+        count.textContent = Math.floor(e * 100);
+        bar.style.width = (e * 100) + '%';
+        if (p > 0.12 && !namesShown) {
+          namesShown = true;
+          $$('.tw-lname').forEach((s, i) => { s.style.transition = `transform .8s ${EXPO} ${i * 40}ms`; s.style.transform = 'translateY(0)'; });
+        }
+        if (p < 1) requestAnimationFrame(lt);
+        else setTimeout(() => {
+          loader.style.transition = `transform .95s ${EXPO}, opacity .7s ease .15s`;
+          loader.style.transform = 'translateY(-102%)'; loader.style.opacity = '0';
+          setTimeout(() => { loader.style.display = 'none'; }, 1000);
+          finishIntro();
+        }, 320);
+      };
+      requestAnimationFrame(lt);
+      this._trailPreload = [];
+    } else { loader.style.display = 'none'; finishIntro(); }
 
-  <!-- ===== CHAPTER V · FABRIC ===== -->
-  <section class="chapter" id="ch-fabric" data-accent="#3a4a8c" data-name="Fabric-a" data-num="V">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">V</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter V</p>
-        <h2 class="ch-title"><em>Fabric-a</em></h2>
-        <p class="ch-desc">The canvas becomes cloth — sarees and skirts painted by hand, made to be worn and walked in.</p>
-      </div>
-    </div>
-    <div class="gallery mat-dark">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/fa-saree-deities.jpg" alt="Hand-painted saree showing deities and Devanagari script on a beige ground" loading="lazy" /></div>
-        <figcaption><span class="art-title">Painted Saree — Deities &amp; Script</span><span class="art-meta">Hand-painted · base: saree</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/fa-skirt-procession.jpg" alt="Blue hand-painted skirt with a white-line village procession scene" loading="lazy" /></div>
-        <figcaption><span class="art-title">Painted Skirt — Village Procession</span><span class="art-meta">Hand-painted · base: skirt</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/fa-saree-lotus.jpg" alt="White saree painted with pink lotuses and a stylised face, held open by the artist" loading="lazy" /></div>
-        <figcaption><span class="art-title">Painted Saree — Lotus &amp; Muse</span><span class="art-meta">Hand-painted · base: saree</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/fa-saree-tree.jpg" alt="Grey saree painted with a tree of life and a folk procession, purple and orange border" loading="lazy" /></div>
-        <figcaption><span class="art-title">Painted Saree — Tree of Life</span><span class="art-meta">Hand-painted · base: saree</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- mouse trail ----------
+    const TRAIL = [['ce-bunny-teapot',1.333],['va-lion',1.007],['st-athena',1.333],['dg-vaan-devi',1],['wc-dussehra',.75],['ab-golden-greed',1.255],['fa-saree-lotus',.563],['ws-3',.75],['ce-harappa-tiles',1.013],['po-vidya-balan',.708],['sa-moon',1.333],['ex-tribal',.751],['tc-sacred-idol',1.333],['va-parrot-cart',1.034],['st-greek',1.333],['dg-mirror-horizon',.75]];
+    TRAIL.forEach(([s]) => { const im = new Image(); im.src = `./images/${s}.jpg`; });
+    const trailBox = $('#tw-trail');
+    let tIdx = 0, lastTx = -999, lastTy = -999, liveTrail = 0;
+    const spawnTrail = (x, y) => {
+      if (calm || liveTrail > 14) return;
+      const [slot, r] = TRAIL[tIdx++ % TRAIL.length];
+      const d = document.createElement('div');
+      const h = 130 + Math.random() * 90;
+      const rot = (Math.random() * 22 - 11).toFixed(1);
+      d.style.cssText = `position:absolute;left:${x}px;top:${y + cur}px;height:${h}px;aspect-ratio:${r};transform:translate(-50%,-50%) rotate(${rot}deg);pointer-events:none;z-index:1;`;
+      const im = document.createElement('img');
+      im.src = `./images/${slot}.jpg`; im.alt = '';
+      im.style.cssText = 'width:100%;height:100%;object-fit:contain;display:block;border-radius:4px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);';
+      d.appendChild(im); trailBox.appendChild(d); liveTrail++;
+      const yr = (Math.random() * 44 - 22).toFixed(1);
+      d.animate([
+        { opacity: 0, transform: `perspective(700px) translate(-50%,-50%) scale(.5) rotate(${rot}deg) rotateY(${yr}deg)` },
+        { opacity: 1, transform: `perspective(700px) translate(-50%,-50%) scale(1) rotate(${rot}deg) rotateY(0deg)`, offset: .18 },
+        { opacity: 1, transform: `perspective(700px) translate(-50%,-52%) scale(1) rotate(${rot}deg) rotateY(0deg)`, offset: .72 },
+        { opacity: 0, transform: `perspective(700px) translate(-50%,-62%) scale(.94) rotate(${rot}deg) rotateY(${-yr}deg)` },
+      ], { duration: 1500, easing: 'cubic-bezier(.22,1,.36,1)' }).onfinish = () => { d.remove(); liveTrail--; };
+    };
 
-  <!-- ===== CHAPTER VI · SAND ART ===== -->
-  <section class="chapter" id="ch-sand" data-accent="#1798b5" data-name="Sand Art" data-num="VI">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">VI</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter VI</p>
-        <h2 class="ch-title"><em>Sand Art</em></h2>
-        <p class="ch-desc">Drawn in light and loose grain — alive for a moment, then wiped away by the same hand that made it.</p>
-      </div>
-    </div>
-    <div class="gallery mat-dark">
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/sa-couple.jpg" alt="Sand art of a divine couple rendered in glowing blue on a dark light-table" loading="lazy" /></div>
-        <figcaption><span class="art-title">The Sacred Couple</span><span class="art-meta">Sand on light table · live performance</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/sa-inprogress.jpg" alt="The artist creating a yellow sand-art bird during a live performance" loading="lazy" /></div>
-        <figcaption><span class="art-title">In Performance</span><span class="art-meta">Sand on light table · live performance</span></figcaption>
-      </figure>
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/sa-moon.jpg" alt="Sand art of a woman reaching toward a crescent moon on a glowing light-table" loading="lazy" /></div>
-        <figcaption><span class="art-title">Moonlit Figure</span><span class="art-meta">Sand on light table · live performance</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- marquees ----------
+    const marquees = $$('[data-marquee]').map((wrap) => {
+      const inner = wrap.firstElementChild;
+      const w0 = () => inner.scrollWidth;
+      let copies = 1;
+      const baseHTML = inner.innerHTML;
+      while (inner.scrollWidth < vw * 2.2 && copies < 8) { inner.innerHTML += baseHTML; copies++; }
+      return { inner, x: 0, half: w0() / copies * Math.floor(copies / 1) , base: 0 };
+    });
+    marquees.forEach((m) => { m.base = m.inner.scrollWidth / 2; });
 
-  <!-- ===== CHAPTER VII · ABSTRACT ===== -->
-  <section class="chapter" id="ch-abstract" data-accent="#b0306a" data-name="Abstract" data-num="VII">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">VII</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter VII</p>
-        <h2 class="ch-title"><em>Abstract</em></h2>
-        <p class="ch-desc">Crowded, contradictory and full of eyes — feeling given a shape before it has time to settle.</p>
-      </div>
-    </div>
-    <div class="gallery mat-paper">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/ab-dismay.jpg" alt="Busy abstract painting with chess players, kites and many faces in bright colour" loading="lazy" /></div>
-        <figcaption><span class="art-title">The Art of Dismay</span><span class="art-meta">Mixed media on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/ab-crucifier.jpg" alt="Abstract painting in reds with large eyes and cross-like forms" loading="lazy" /></div>
-        <figcaption><span class="art-title">Crucifier</span><span class="art-meta">Mixed media on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/ab-untitled.jpg" alt="Abstract painting of overlapping coloured profiles holding a yellow flower" loading="lazy" /></div>
-        <figcaption><span class="art-title">Untitled</span><span class="art-meta">Mixed media on paper · A3 (29.7 × 42 cm)</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- sections / accent / now ----------
+    const sections = $$('[data-accent]');
+    const nowNum = $('#tw-now-num'), nowName = $('#tw-now-name');
+    let activeEl = null;
 
-  <!-- ===== CHAPTER VIII · EXHIBITS ===== -->
-  <section class="chapter" id="ch-exhibits" data-accent="#a9701b" data-name="Exhibits" data-num="VIII">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">VIII</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter VIII</p>
-        <h2 class="ch-title"><em>Exhibits</em></h2>
-        <p class="ch-desc">The large statements — a Mumbai local, a national budget, a tribe. India read back to itself.</p>
-      </div>
-    </div>
-    <div class="gallery mat-paper">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/ex-mumbai-local.jpg" alt="Wide framed painting of crowded figures and gods inside a Mumbai local train" loading="lazy" /></div>
-        <figcaption><span class="art-title">Grievance of God in Mumbai Local</span><span class="art-meta">Exhibited work</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/ex-india-budget.jpg" alt="Blue-toned painting with a kite of figures over a dense cityscape" loading="lazy" /></div>
-        <figcaption><span class="art-title">India Budget</span><span class="art-meta">Exhibited work</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/ex-tribal.jpg" alt="Colourful painting of tribal women and fish in green and gold" loading="lazy" /></div>
-        <figcaption><span class="art-title">Tribal</span><span class="art-meta">Exhibited work</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- selected pin ----------
+    const selwrap = $('#tw-selwrap'), selinner = $('#tw-selinner'), track = $('#tw-track');
+    const selidx = $('#tw-selidx'), selbar = $('#tw-selbar');
+    const slides = $$('.tw-slide');
+    if (!calm) { track.style.perspective = '1500px'; slides.forEach((sl) => { sl.style.willChange = 'transform'; }); }
+    let selTop = 0, selExtra = 0, narrow = false;
+    const measureSel = () => {
+      narrow = vw < 880;
+      if (narrow || isTouch) {
+        selwrap.style.height = 'auto';
+        selinner.style.height = 'auto';
+        selinner.style.overflowX = 'auto';
+        selinner.style.padding = '60px 0';
+        track.style.transform = 'none';
+        selExtra = 0;
+        return;
+      }
+      selinner.style.overflowX = 'hidden';
+      selinner.style.height = '100vh';
+      selinner.style.padding = '0';
+      selExtra = Math.max(0, track.scrollWidth - selinner.clientWidth);
+      selwrap.style.height = (vh + selExtra) + 'px';
+      selTop = offTop(selwrap);
+    };
 
-  <!-- ===== CHAPTER IX · STAGE DÉCOR ===== -->
-  <section class="chapter" id="ch-stage" data-accent="#c56b86" data-name="Stage Décor" data-num="IX">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">IX</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter IX</p>
-        <h2 class="ch-title"><em>Stage Décor</em></h2>
-        <p class="ch-desc">Whole worlds built to be stood inside — Greek columns, a silver anniversary, a goddess of wisdom.</p>
-      </div>
-    </div>
-    <div class="gallery mat-photo">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/st-athena.jpg" alt="Stage set with a large princess figure framed by pink and silver floral panels" loading="lazy" /></div>
-        <figcaption><span class="art-title">Athena 2020</span><span class="art-meta">Stage décor</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/st-25th.jpg" alt="Anniversary stage with performers in pink and a large 25 Years emblem" loading="lazy" /></div>
-        <figcaption><span class="art-title">25th Anniversary</span><span class="art-meta">Stage décor</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/st-greek.jpg" alt="Stage props of white and gold Greek columns" loading="lazy" /></div>
-        <figcaption><span class="art-title">Greek</span><span class="art-meta">Stage décor</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/st-vistas.jpg" alt="Auditorium stage decorated with a painted tree backdrop, 'Vistas of Career'" loading="lazy" /></div>
-        <figcaption><span class="art-title">Vistas of Career</span><span class="art-meta">Stage décor</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- rooms ----------
+    const rows = $$('.tw-row');
+    const follow = $('#tw-follow'), followImg = $('#tw-follow-img'), followFrame = $('#tw-follow-frame');
+    let fx = mx, fy = my, followOn = false;
+    let openRow = null;
+    const roomById = {}; this._rooms.forEach((r) => { roomById[r.id] = r; });
+    const setPanel = (row, open) => {
+      const panel = row.querySelector('.tw-panel');
+      const btn = row.querySelector('.tw-rowbtn');
+      const plus = row.querySelector('.tw-rowplus');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      plus.style.transform = open ? 'rotate(45deg)' : 'rotate(0deg)';
+      if (open) {
+        panel.style.height = panel.scrollHeight + 'px';
+        const onEnd = (e) => { if (e.propertyName === 'height') { panel.style.height = 'auto'; panel.removeEventListener('transitionend', onEnd); syncSpacer(); } };
+        panel.addEventListener('transitionend', onEnd);
+      } else {
+        panel.style.height = panel.scrollHeight + 'px';
+        void panel.offsetHeight;
+        panel.style.height = '0px';
+      }
+      setTimeout(syncSpacer, 850);
+    };
+    const toggleRow = (row) => {
+      if (openRow === row) { setPanel(row, false); openRow = null; return; }
+      let comp = 0;
+      if (openRow) {
+        // if the closing panel sits ABOVE the target row, everything below will
+        // shift up by its height once collapsed — compensate the scroll target.
+        if (openRow.compareDocumentPosition(row) & Node.DOCUMENT_POSITION_FOLLOWING) {
+          const cp = openRow.querySelector('.tw-panel');
+          comp = cp ? cp.offsetHeight : 0;
+        }
+        setPanel(openRow, false);
+      }
+      setPanel(row, true); openRow = row;
+      accTar = this.hexToRgb(row.getAttribute('data-accent'));
+      setTimeout(() => { window.scrollTo({ top: Math.max(0, offTop(row) - 70 - comp), behavior: SMOOTH ? 'auto' : 'smooth' }); }, 60);
+    };
+    rows.forEach((row) => {
+      const btn = row.querySelector('.tw-rowbtn');
+      const fill = row.querySelector('.tw-rowfill');
+      const inner = row.querySelector('.tw-rowin');
+      const name = row.querySelector('.tw-rowname');
+      const rid = row.getAttribute('data-rid');
+      btn.addEventListener('mouseenter', () => {
+        fill.style.transform = 'scaleY(1)';
+        inner.style.color = '#0F0D0A';
+        name.style.transform = 'translateX(18px)';
+        this.scramble(name, roomById[rid].name);
+        if (!isTouch) {
+          const first = roomById[rid].items[0];
+          followImg.src = `./images/${first.slot}.jpg`;
+          followFrame.style.aspectRatio = String(Math.min(1.4, Math.max(0.7, first.r)));
+          follow.style.opacity = '1';
+          follow.style.transform = 'translate(-50%,-56%) scale(1) rotate(2deg)';
+          followOn = true;
+        }
+      });
+      btn.addEventListener('mouseleave', () => {
+        fill.style.transform = 'scaleY(0)';
+        inner.style.color = '#EDE5D6';
+        name.style.transform = 'translateX(0)';
+        follow.style.opacity = '0';
+        follow.style.transform = 'translate(-50%,-56%) scale(.92) rotate(2deg)';
+        followOn = false;
+      });
+    });
 
-  <!-- ===== CHAPTER X · LIVE SIZE ===== -->
-  <section class="chapter" id="ch-livesize" data-accent="#d2691e" data-name="Live Size" data-num="X">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">X</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter X</p>
-        <h2 class="ch-title"><em>Live Size</em></h2>
-        <p class="ch-desc">Art you walk through — a tiger's open jaws, a hand holding a lit idea, the weight of space.</p>
-      </div>
-    </div>
-    <div class="gallery mat-photo">
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/ls-gen-exhibit.jpg" alt="Large colourful floor mural spelling GEN, the artist working on it" loading="lazy" /></div>
-        <figcaption><span class="art-title">Gen. Exhibit</span><span class="art-meta">Large-scale floor installation</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/ls-tiger.jpg" alt="Giant painted tiger cut-out with open jaws, a person standing inside it" loading="lazy" /></div>
-        <figcaption><span class="art-title">Tiger</span><span class="art-meta">Walk-through cut-out installation</span></figcaption>
-      </figure>
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/ls-space.jpg" alt="Large floor painting of astronauts and planets in deep blue space" loading="lazy" /></div>
-        <figcaption><span class="art-title">Space</span><span class="art-meta">Large-scale floor installation</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/ls-nirmaan.jpg" alt="Light installation of a giant bulb held in a hand beside an Einstein E equals m c squared panel" loading="lazy" /></div>
-        <figcaption><span class="art-title">Nirmaan</span><span class="art-meta">Light installation</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- tiles hover ----------
+    $$('[data-lb]').forEach((f) => {
+      const frame = f.querySelector('.tw-tileframe');
+      const img = f.querySelector('img');
+      if (frame) frame.style.transition = 'border-color .5s ease, transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s ease';
+      f.addEventListener('mouseenter', () => {
+        if (frame) { frame.style.borderColor = f.getAttribute('data-acc') || '#EDE5D6'; frame.style.boxShadow = '0 34px 70px -30px rgba(0,0,0,.85)'; }
+        if (img && frame) img.style.transform = 'scale(1.05)';
+      });
+      if (frame && !isTouch && !calm) {
+        f.addEventListener('mousemove', (e) => {
+          const r = frame.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - 0.5;
+          const py = (e.clientY - r.top) / r.height - 0.5;
+          frame.style.transform = `perspective(750px) rotateX(${(-py * 9).toFixed(2)}deg) rotateY(${(px * 11).toFixed(2)}deg) translateZ(14px)`;
+        });
+      }
+      f.addEventListener('mouseleave', () => {
+        if (frame) { frame.style.borderColor = 'rgba(237,229,214,.12)'; frame.style.transform = ''; frame.style.boxShadow = ''; }
+        if (img) img.style.transform = 'scale(1)';
+      });
+    });
 
-  <!-- ===== CHAPTER XI · DIGITAL ===== -->
-  <section class="chapter" id="ch-digital" data-accent="#c0392b" data-name="Digital Art" data-num="XI">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">XI</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Chapter XI</p>
-        <h2 class="ch-title"><em>Digital Art</em></h2>
-        <p class="ch-desc">The newest room. Drawn on an iPad — the old motifs return in electric colour.</p>
-      </div>
-    </div>
-    <div class="gallery mat-dark">
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/dg-eye-for-an-eye.jpg" alt="Digital artwork full of fish, faces and watching eyes in warm colour" loading="lazy" /></div>
-        <figcaption><span class="art-title">Eye for an Eye</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/dg-ram-bhakt.jpg" alt="Maroon digital line drawing of a devotee figure with the words Jai Shri Ram" loading="lazy" /></div>
-        <figcaption><span class="art-title">Ram Bhakt</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.08">
-        <div class="frame"><img src="images/dg-vaan-devi.jpg" alt="Digital portrait of a red goddess face with ornate jewellery" loading="lazy" /></div>
-        <figcaption><span class="art-title">Vaan Devi</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.06">
-        <div class="frame"><img src="images/dg-mirror-horizon.jpg" alt="Symmetrical, mandala-like digital artwork of mirrored faces in rich colour" loading="lazy" /></div>
-        <figcaption><span class="art-title">Mirror Horizon</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- lightbox ----------
+    const lb = $('#tw-lb'), lbImg = $('#tw-lb-img'), lbTitle = $('#tw-lb-title'), lbMeta = $('#tw-lb-meta'), lbRoom = $('#tw-lb-room'), lbCount = $('#tw-lb-count');
+    const groups = {};
+    $$('[data-lb]').forEach((f) => {
+      const g = f.getAttribute('data-group');
+      (groups[g] = groups[g] || []).push(f);
+    });
+    let lbGroup = null, lbIdx = 0, lbOpen = false;
+    const lbShow = (animDir) => {
+      const f = groups[lbGroup][lbIdx];
+      lbImg.src = `./images/${f.getAttribute('data-slot')}.jpg`;
+      lbImg.alt = f.getAttribute('data-title');
+      lbTitle.textContent = f.getAttribute('data-title');
+      lbMeta.textContent = f.getAttribute('data-meta');
+      lbRoom.textContent = 'ROOM — ' + f.getAttribute('data-roomname').toUpperCase();
+      lbCount.textContent = String(lbIdx + 1).padStart(2, '0') + ' / ' + String(groups[lbGroup].length).padStart(2, '0');
+      accTar = this.hexToRgb(f.getAttribute('data-acc') || '#E0854A');
+      lbImg.animate([
+        { opacity: 0, transform: `translateX(${animDir * 34}px) scale(.97)` },
+        { opacity: 1, transform: 'translateX(0) scale(1)' },
+      ], { duration: 480, easing: 'cubic-bezier(.22,1,.36,1)' });
+    };
+    const lbOpenFn = (f) => {
+      lbGroup = f.getAttribute('data-group');
+      lbIdx = groups[lbGroup].indexOf(f);
+      lbOpen = true;
+      lb.style.visibility = 'visible'; lb.style.opacity = '1';
+      document.documentElement.style.overflow = 'hidden';
+      lbShow(0);
+    };
+    const lbCloseFn = () => {
+      lbOpen = false; lb.style.opacity = '0';
+      setTimeout(() => { if (!lbOpen) lb.style.visibility = 'hidden'; }, 470);
+      document.documentElement.style.overflow = '';
+    };
+    const lbNav = (dir) => {
+      const n = groups[lbGroup].length;
+      lbIdx = (lbIdx + dir + n) % n;
+      lbShow(dir);
+    };
+    lb.addEventListener('click', (e) => { if (e.target === lb || e.target === lbImg.parentElement) lbCloseFn(); });
 
-  <!-- ===== EPILOGUE · WORKSHOPS ===== -->
-  <section class="chapter workshops" id="ch-workshops" data-accent="#c99a2e" data-name="Workshops" data-num="XII">
-    <div class="chapter-head">
-      <span class="ch-num" data-speed="0.10">XII</span>
-      <div class="ch-copy">
-        <p class="eyebrow">Epilogue</p>
-        <h2 class="ch-title"><em>Workshops</em></h2>
-        <p class="ch-desc">And the part that outlasts any single piece — putting the brush into someone else's hand.</p>
-      </div>
-    </div>
-    <div class="gallery mat-photo">
-      <figure class="art wide" data-speed="0.05">
-        <div class="frame"><img src="images/ws-1.jpg" alt="A group of schoolchildren holding up their finished paintings" loading="lazy" /></div>
-        <figcaption><span class="art-title">Young Artists</span><span class="art-meta">Workshop</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/ws-2.jpg" alt="Students painting on paper while seated on a studio floor" loading="lazy" /></div>
-        <figcaption><span class="art-title">On the Studio Floor</span><span class="art-meta">Workshop</span></figcaption>
-      </figure>
-      <figure class="art offset" data-speed="0.07">
-        <div class="frame"><img src="images/ws-3.jpg" alt="Kavita with a visiting student holding a terracotta tile they made" loading="lazy" /></div>
-        <figcaption><span class="art-title">A First Tile</span><span class="art-meta">Terracotta workshop</span></figcaption>
-      </figure>
-      <figure class="art" data-speed="0.09">
-        <div class="frame"><img src="images/ws-4.jpg" alt="Children painting a rainbow onto a white t-shirt at a table" loading="lazy" /></div>
-        <figcaption><span class="art-title">T-shirt Painting</span><span class="art-meta">Workshop</span></figcaption>
-      </figure>
-    </div>
-  </section>
+    // ---------- menu ----------
+    const menu = $('#tw-menu'), menuPrev = $('#tw-menuprev');
+    const mlinks = $$('.tw-mlink');
+    let menuOpen = false;
+    const setMenu = (open) => {
+      menuOpen = open;
+      if (open) {
+        menu.style.visibility = 'visible';
+        menu.style.transition = `clip-path .8s ${EXPO}`;
+        menu.style.clipPath = 'inset(0 0 0% 0)';
+        document.documentElement.style.overflow = 'hidden';
+        mlinks.forEach((l, i) => {
+          l.style.transition = 'none'; l.style.opacity = '0'; l.style.transform = 'translateX(-26px)';
+          setTimeout(() => {
+            l.style.transition = `opacity .6s ease, transform .7s ${EXPO}`;
+            l.style.opacity = '1'; l.style.transform = 'translateX(0)';
+          }, 140 + i * 65);
+        });
+      } else {
+        menu.style.clipPath = 'inset(0 0 100% 0)';
+        setTimeout(() => { if (!menuOpen) menu.style.visibility = 'hidden'; }, 820);
+        if (!lbOpen) document.documentElement.style.overflow = '';
+      }
+    };
+    mlinks.forEach((l) => {
+      l.addEventListener('mouseenter', () => {
+        const lab = l.querySelector('.tw-mlabel');
+        lab.style.transform = 'translateX(14px)'; lab.style.color = 'var(--acc)';
+        menuPrev.style.opacity = '0';
+        setTimeout(() => { menuPrev.src = `./images/${l.getAttribute('data-preview')}.jpg`; menuPrev.style.opacity = '1'; }, 180);
+      });
+      l.addEventListener('mouseleave', () => {
+        const lab = l.querySelector('.tw-mlabel');
+        lab.style.transform = 'translateX(0)'; lab.style.color = '';
+      });
+    });
 
-</main>
+    const scrollToEl = (el, off = 0) => {
+      window.scrollTo({ top: Math.max(0, offTop(el) + off), behavior: SMOOTH ? 'auto' : 'smooth' });
+    };
 
-<!-- ===== CONTACT / FOOTER ===== -->
-<footer class="contact" id="contact" data-accent="#4f7a4a" data-name="Contact" data-num="·">
-  <div class="contact-inner">
-    <p class="eyebrow">Get in touch</p>
-    <h2 class="contact-title">Commissions, exhibitions<br />&amp; <em>workshops</em>.</h2>
-    <div class="contact-grid">
-      <ul class="contact-links">
-        <li><span>Email</span><a href="mailto:kavitajha1826@gmail.com">kavitajha1826@gmail.com</a></li>
-        <li><span>Links</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener">linktr.ee/artsbykavitajha</a></li>
-        <li><span>Based in</span>Mumbai · Bangalore</li>
-      </ul>
-      <a class="contact-qr" href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" aria-label="Open Kavita Jha's link page">
-        <img src="images/qr-linktree.jpg" alt="QR code linking to Kavita Jha's link page" loading="lazy" />
-        <span>Scan for everything</span>
-      </a>
-    </div>
-    <p class="colophon">© <span id="year">2026</span> Kavita Jha · All works shown are the artist's own. &nbsp;·&nbsp; Site crafted by Yatharth Jha.</p>
-  </div>
-</footer>
+    // ---------- clicks ----------
+    root.addEventListener('click', (e) => {
+      const t = e.target;
+      const fig = t.closest && t.closest('[data-lb]');
+      if (fig) { lbOpenFn(fig); return; }
+      if (t.closest && t.closest('#tw-menubtn')) { setMenu(true); return; }
+      if (t.closest && t.closest('#tw-menuclose')) { setMenu(false); return; }
+      const ml = t.closest && t.closest('.tw-mlink');
+      if (ml) { setMenu(false); setTimeout(() => scrollToEl(document.getElementById(ml.getAttribute('data-target'))), 300); return; }
+      const mr = t.closest && t.closest('.tw-mroom');
+      if (mr) {
+        setMenu(false);
+        const row = rows.find((r) => r.getAttribute('data-rid') === mr.getAttribute('data-rid'));
+        setTimeout(() => { if (row && openRow !== row) toggleRow(row); else if (row) scrollToEl(row, -70); }, 350);
+        return;
+      }
+      const rb = t.closest && t.closest('.tw-rowbtn');
+      if (rb) { toggleRow(rb.parentElement); return; }
+      if (t.closest && t.closest('#tw-openrooms')) { scrollToEl($('#tw-rooms')); return; }
+      if (t.closest && (t.closest('#tw-mark') || t.closest('#tw-totop'))) { window.scrollTo({ top: 0, behavior: SMOOTH ? 'auto' : 'smooth' }); return; }
+      if (t.closest && t.closest('#tw-lb-prev')) { lbNav(-1); return; }
+      if (t.closest && t.closest('#tw-lb-next')) { lbNav(1); return; }
+      if (t.closest && t.closest('#tw-lb-close')) { lbCloseFn(); return; }
+    });
 
-<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+    // ---------- keys ----------
+    this._onKey = (e) => {
+      if (lbOpen) {
+        if (e.key === 'Escape') lbCloseFn();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+      } else if (menuOpen && e.key === 'Escape') setMenu(false);
+    };
+    window.addEventListener('keydown', this._onKey);
 
-<script src="js/main.js"></script>
+    // ---------- mouse ----------
+    this._onMove = (e) => {
+      mx = e.clientX; my = e.clientY;
+      if (!isTouch) {
+        dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
+        dot.style.opacity = '1'; ring.style.opacity = '1';
+      }
+      if (e.target.closest && e.target.closest('#tw-hero') && !menuOpen && !lbOpen) {
+        const dxT = mx - lastTx, dyT = my - lastTy;
+        if (dxT * dxT + dyT * dyT > 8100) { lastTx = mx; lastTy = my; spawnTrail(mx, my); }
+      }
+    };
+    window.addEventListener('mousemove', this._onMove);
+
+    // ---------- email underline / portrait ----------
+    const email = $('#tw-email'), emailLine = $('#tw-emailline');
+    if (email) {
+      email.addEventListener('mouseenter', () => { emailLine.style.transform = 'scaleX(1)'; });
+      email.addEventListener('mouseleave', () => { emailLine.style.transform = 'scaleX(0)'; });
+    }
+    const portrait = $('#tw-portrait');
+    const titlewrap = $('#tw-titlewrap');
+    let hTX = 0, hTY = 0;
+    if (portrait) {
+      const pf = portrait.parentElement;
+      pf.style.transition = 'transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s ease';
+      pf.addEventListener('mouseenter', () => { portrait.style.filter = 'grayscale(0) contrast(1)'; });
+      if (!isTouch && !calm) {
+        pf.addEventListener('mousemove', (e) => {
+          const r = pf.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - 0.5;
+          const py = (e.clientY - r.top) / r.height - 0.5;
+          pf.style.transform = `perspective(1000px) rotateX(${(-py * 6).toFixed(2)}deg) rotateY(${(px * 8).toFixed(2)}deg)`;
+        });
+      }
+      pf.addEventListener('mouseleave', () => { portrait.style.filter = 'grayscale(1) contrast(1.05)'; pf.style.transform = ''; });
+    }
+
+    // ---------- magnetic ----------
+    const mags = $$('[data-mag]').map((el) => ({ el, x: 0, y: 0 }));
+
+    // ---------- layout / recalc ----------
+    const progress = $('#tw-progress'), totop = $('#tw-totop'), badge = $('#tw-badge');
+    const menumid = $('#tw-menumid'), menuright = $('#tw-menuright'), artist = $('#tw-artist');
+    const recalc = () => {
+      vw = window.innerWidth; vh = window.innerHeight;
+      const nrw = vw < 880;
+      artist.style.gridTemplateColumns = nrw ? '1fr' : 'minmax(0,.85fr) minmax(0,1.15fr)';
+      menumid.style.gridTemplateColumns = nrw ? '1fr' : '1.15fr .85fr';
+      menuright.style.display = nrw ? 'none' : 'flex';
+      badge.style.display = nrw ? 'none' : 'block';
+      $$('.tw-rowtag').forEach((t) => { t.style.display = nrw ? 'none' : 'inline'; });
+      $('#tw-selhud').style.display = nrw || isTouch ? 'none' : 'block';
+      $('#tw-selbarwrap').style.display = nrw || isTouch ? 'none' : 'block';
+      measureSel();
+      syncSpacer();
+      if (kinetic) measureLetters();
+    };
+    this._onResize = () => { recalc(); };
+    window.addEventListener('resize', this._onResize);
+    if ('ResizeObserver' in window) {
+      this._ro = new ResizeObserver(() => { this._needsRecalc = true; });
+      this._ro.observe(plane);
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { this._needsRecalc = true; });
+    recalc();
+
+    // ---------- main loop ----------
+    const tick = () => {
+      frame++;
+      const target = window.scrollY;
+      cur += (target - cur) * (SMOOTH ? 0.088 : 1);
+      if (Math.abs(target - cur) < 0.05) cur = target;
+      if (SMOOTH) plane.style.transform = `translate3d(0,${-Math.round(cur * 100) / 100}px,0)`;
+      const vel = Math.abs(cur - lastY); lastY = cur;
+
+      if (this._needsRecalc && frame % 12 === 0) { this._needsRecalc = false; recalc(); }
+
+      // accent lerp
+      accCur.r += (accTar.r - accCur.r) * 0.06;
+      accCur.g += (accTar.g - accCur.g) * 0.06;
+      accCur.b += (accTar.b - accCur.b) * 0.06;
+      setAcc();
+
+      // progress + totop
+      const max = Math.max(1, (SMOOTH ? plane.offsetHeight : document.documentElement.scrollHeight) - vh);
+      progress.style.width = (clamp(cur / max, 0, 1) * 100) + '%';
+      const showTop = cur > vh * 0.8;
+      totop.style.opacity = showTop ? '1' : '0';
+      totop.style.transform = showTop ? 'translateY(0)' : 'translateY(14px)';
+      totop.style.pointerEvents = showTop ? 'auto' : 'none';
+
+      // sections
+      if (frame % 3 === 0) {
+        const mid = vh * 0.45;
+        let chosen = null;
+        for (const s of sections) {
+          const r = s.getBoundingClientRect();
+          if (r.top <= mid && r.bottom > mid) chosen = s;
+        }
+        if (chosen && chosen !== activeEl) {
+          activeEl = chosen;
+          if (!(openRow && chosen.classList && chosen.classList.contains('tw-row') === false)) { /* keep */ }
+          accTar = this.hexToRgb(chosen.getAttribute('data-accent'));
+          nowNum.textContent = chosen.getAttribute('data-num');
+          nowName.textContent = chosen.getAttribute('data-name');
+        }
+      }
+
+      // reveals
+      if (pendingRv.length) {
+        for (let i = pendingRv.length - 1; i >= 0; i--) {
+          const el = pendingRv[i];
+          const r = el.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > 0 && r.height > 0) { revealEl(el); pendingRv.splice(i, 1); }
+        }
+      }
+      if (pendingSplits.length) {
+        for (let i = pendingSplits.length - 1; i >= 0; i--) {
+          const el = pendingSplits[i];
+          const r = el.getBoundingClientRect();
+          if (r.top < vh * 0.88 && r.bottom > 0) { revealSplit(el); pendingSplits.splice(i, 1); }
+        }
+      }
+
+      // selected pin
+      if (selExtra > 0) {
+        const y = clamp(cur - selTop, 0, selExtra);
+        selinner.style.transform = `translate3d(0,${y}px,0)`;
+        track.style.transform = `translate3d(${-y}px,0,0)`;
+        const p = selExtra ? y / selExtra : 0;
+        selbar.style.width = (p * 100) + '%';
+        selidx.textContent = String(clamp(Math.round(p * (slides.length - 1)), 0, slides.length - 1) + 1).padStart(2, '0');
+        if (frame % 2 === 0 && cur > selTop - vh && cur < selTop + selExtra + vh) {
+          const cx = vw / 2;
+          slides.forEach((sl) => {
+            const r = sl.getBoundingClientRect();
+            if (r.right < -260 || r.left > vw + 260) return;
+            const d = (r.left + r.width / 2 - cx) / vw;
+            if (!calm) sl.style.transform = `rotateY(${(d * -13).toFixed(2)}deg) translateZ(${(-Math.abs(d) * 130).toFixed(1)}px)`;
+            const img = sl.querySelector('.tw-slideimg');
+            if (img) img.style.transform = `translateX(${d * -26}px)`;
+          });
+        }
+      }
+
+      // hero kinetic + parallax
+      if (kinetic && !isTouch && cur < vh * 1.3 && heroLetters.length) {
+        for (const L of heroLetters) {
+          const dx = mx - L.cx, dy = my - (L.cy - cur);
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const inf = Math.max(0, 1 - dist / 300);
+          const ty = -inf * 16, tr = clamp(dx / 46, -5, 5) * inf;
+          L.y += (ty - L.y) * 0.16; L.r += (tr - L.r) * 0.16;
+          if (Math.abs(L.y) > 0.05 || Math.abs(L.r) > 0.05) L.el.style.transform = `translateY(${L.y.toFixed(2)}px) rotate(${L.r.toFixed(2)}deg)`;
+        }
+      }
+      if (kinetic && !isTouch && !calm && titlewrap && cur < vh * 1.25) {
+        const ttx = (my / vh - 0.5) * -7, tty = (mx / vw - 0.5) * 9;
+        hTX += (ttx - hTX) * 0.07; hTY += (tty - hTY) * 0.07;
+        titlewrap.style.transform = `perspective(1100px) rotateX(${hTX.toFixed(2)}deg) rotateY(${hTY.toFixed(2)}deg)`;
+      }
+      if (portrait && cur < offTop(artist) + artist.offsetHeight) {
+        const r = portrait.parentElement.getBoundingClientRect();
+        const p = clamp((vh - r.top) / (vh + r.height), 0, 1);
+        portrait.style.transform = `translateY(${(-p * 15).toFixed(2)}%)`;
+      }
+
+      // marquees
+      marquees.forEach((m) => {
+        m.x -= 0.6 + Math.min(3, vel * 0.06);
+        if (m.x <= -m.base) m.x += m.base;
+        m.inner.style.transform = `translate3d(${m.x.toFixed(1)}px,0,0)`;
+      });
+
+      // cursor ring
+      if (!isTouch) {
+        rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+        ring.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`;
+      }
+
+      // follower
+      if (followOn) {
+        fx += (mx - fx) * 0.13; fy += (my - fy) * 0.13;
+        follow.style.left = fx + 'px'; follow.style.top = fy + 'px';
+      }
+
+      // magnetic
+      if (!isTouch) {
+        for (const m of mags) {
+          const r = m.el.getBoundingClientRect();
+          if (r.width === 0) continue;
+          const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+          const dx = mx - cx, dy = my - cy;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          const tx = d < 140 ? dx * 0.3 : 0, ty = d < 140 ? dy * 0.3 : 0;
+          m.x += (tx - m.x) * 0.14; m.y += (ty - m.y) * 0.14;
+          if (Math.abs(m.x) > 0.05 || Math.abs(m.y) > 0.05) m.el.style.transform = `translate(${m.x.toFixed(1)}px,${m.y.toFixed(1)}px)`;
+          else if (m.el.style.transform) m.el.style.transform = '';
+        }
+      }
+
+      this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+
+  scramble(el, finalText) {
+    if (el._scrambling) return;
+    el._scrambling = true;
+    const CHARS = '!<>-_\\/[]{}—=+*^?#';
+    const len = finalText.length;
+    const t0 = performance.now(), dur = 460;
+    const step = () => {
+      const p = Math.min(1, (performance.now() - t0) / dur);
+      const solid = Math.floor(p * len);
+      let out = finalText.slice(0, solid);
+      for (let i = solid; i < len; i++) {
+        out += finalText[i] === ' ' ? ' ' : CHARS[(Math.random() * CHARS.length) | 0];
+      }
+      el.textContent = out;
+      if (p < 1) requestAnimationFrame(step);
+      else { el.textContent = finalText; el._scrambling = false; }
+    };
+    requestAnimationFrame(step);
+  }
+}
+</script>
 </body>
 </html>
