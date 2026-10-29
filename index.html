@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kavita Jha — Art Showcase · Expressions in Every Medium</title>
+<meta name="description" content="The art of Kavita Jha — a journey through watercolour, terracotta, ceramics, hand-painted fabric, sand art, digital work and room-sized installations. Mumbai · Bangalore." />
+
+<!-- Open Graph (how the link looks when shared on WhatsApp / social) -->
+<meta property="og:title" content="Kavita Jha — Art Showcase" />
+<meta property="og:description" content="Expressions in Every Medium. A journey through the work, one medium at a time." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="images/dg-vaan-devi.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- ===== Intro loader ===== -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-eyebrow">Art Showcase</span>
+    <span class="loader-name">Kavita&nbsp;Jha</span>
+    <span class="loader-rule"></span>
+    <span class="loader-tag">Expressions in every medium</span>
+  </div>
+</div>
+
+<!-- ===== Custom cursor (hidden on touch devices) ===== -->
+<div id="cursor-ring" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- ===== Left "journey through time" rail ===== -->
+<nav class="rail" aria-label="Jump to a chapter">
+  <div class="rail-track"><span class="rail-fill" id="railFill"></span></div>
+  <ul class="rail-dots" id="railDots"></ul>
+</nav>
+
+<!-- floating chapter indicator -->
+<div class="now-showing" id="nowShowing" aria-hidden="true">
+  <span class="now-num" id="nowNum">—</span>
+  <span class="now-name" id="nowName">Welcome</span>
+</div>
+
+<!-- skip link for keyboard users -->
+<a href="#about" class="skip-link">Skip to content</a>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top" data-accent="#c0392b" data-name="Cover" data-num="—">
+  <div class="hero-bg" style="background-image:url('images/hero-digital.jpg')"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Every medium · Mumbai &nbsp;→&nbsp; Bangalore</p>
+    <h1 class="hero-title">Kavita<br /><em>Jha</em></h1>
+    <p class="hero-sub">A journey through art &amp; craft — one medium at a time.</p>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll through the work</span>
+    <span class="cue-line"></span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" data-accent="#4f7a4a" data-name="The Artist" data-num="·">
+    <div class="about-photo">
+      <img src="images/artist-portrait.jpg" alt="Kavita Jha painting a tree at her easel, in a yellow outfit" loading="lazy" />
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">About the artist</p>
+      <p class="lede">Kavita Jha is a Mumbai-born artist who refuses to settle on a single material.</p>
+      <p>Watercolour and terracotta, glazed ceramics and hand-painted cloth, sand drawn in light, the digital tablet, and installations large enough to walk through — the work moves freely across all of them, held together by a recurring cast of faces, gods, fish and many watching eyes.</p>
+      <p>What follows is a journey through that body of work, grouped by medium. Take it slowly, top to bottom.</p>
+      <ul class="about-meta">
+        <li><span>Based in</span> Mumbai &amp; Bangalore</li>
+        <li><span>Working in</span> All mediums</li>
+        <li><span>Reach</span> <a href="mailto:kavitajha1826@gmail.com">kavitajha1826@gmail.com</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER I · WATERCOLOUR ===== -->
+  <section class="chapter" id="ch-watercolour" data-accent="#4f7a4a" data-name="Watercolour" data-num="I">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">I</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter I</p>
+        <h2 class="ch-title"><em>Watercolour</em></h2>
+        <p class="ch-desc">Pigment let loose on wet paper — woods, weathered houses and temple stone, each caught in a single breath.</p>
+      </div>
+    </div>
+    <div class="gallery mat-paper">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/wc-woods.jpg" alt="Watercolour of a wooden cabin among green and autumn-orange trees" loading="lazy" /></div>
+        <figcaption><span class="art-title">A Simple Scenic View of the Woods</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/wc-wooden-house.jpg" alt="Watercolour of a tall wooden house on stilts in the countryside" loading="lazy" /></div>
+        <figcaption><span class="art-title">Wooden House, Countryside</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/wc-trimurti.jpg" alt="Watercolour of carved stone temple faces among trees, in the Bayon style" loading="lazy" /></div>
+        <figcaption><span class="art-title">Tri-Murti</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/wc-pachcha.jpg" alt="Watercolour of a green Kathakali Pachcha face in vivid colour" loading="lazy" /></div>
+        <figcaption><span class="art-title">Beauty of Pachcha</span><span class="art-meta">Watercolour on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER II · PORTRAITS ===== -->
+  <section class="chapter" id="ch-portraits" data-accent="#6e7b74" data-name="Portraits" data-num="II">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">II</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter II</p>
+        <h2 class="ch-title"><em>Portraits</em></h2>
+        <p class="ch-desc">Faces of Indian cinema and art, built from translucent washes and a few certain strokes.</p>
+      </div>
+    </div>
+    <div class="gallery mat-paper">
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/po-nana-patekar.jpg" alt="Watercolour portrait of actor Nana Patekar" loading="lazy" /></div>
+        <figcaption><span class="art-title">Nana Patekar</span><span class="art-meta">Watercolour on paper · Indian film actor</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/po-vidya-balan.jpg" alt="Watercolour portrait of actress Vidya Balan, smiling" loading="lazy" /></div>
+        <figcaption><span class="art-title">Vidya Balan</span><span class="art-meta">Watercolour on paper · Indian film actress</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/po-naseeruddin-shah.jpg" alt="Watercolour portrait of actor Naseeruddin Shah" loading="lazy" /></div>
+        <figcaption><span class="art-title">Naseeruddin Shah</span><span class="art-meta">Watercolour on paper · Indian film actor</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/po-shyam-sharma.jpg" alt="Watercolour portrait of artist Shyam Sharma with glasses and white beard" loading="lazy" /></div>
+        <figcaption><span class="art-title">Shyam Sharma</span><span class="art-meta">Watercolour on paper · Indian printmaker &amp; artist</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER III · TERRACOTTA ===== -->
+  <section class="chapter" id="ch-terracotta" data-accent="#b0552f" data-name="Terracotta" data-num="III">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">III</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter III</p>
+        <h2 class="ch-title"><em>Terracotta</em></h2>
+        <p class="ch-desc">Earth pressed, scored and fired — masks, idols, and a wall panel that seems to remember.</p>
+      </div>
+    </div>
+    <div class="gallery mat-dark">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/tc-my-form.jpg" alt="Long terracotta relief panel carved with faces, fish and motifs" loading="lazy" /></div>
+        <figcaption><span class="art-title">My Form</span><span class="art-meta">Terracotta relief · 80 × 30 × 3 cm</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/tc-tribal-mask.jpg" alt="Three terracotta tribal masks with incised patterns" loading="lazy" /></div>
+        <figcaption><span class="art-title">Tribal Mask</span><span class="art-meta">Terracotta · set of three · 20 × 10 × 3.1 cm</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/tc-stare.jpg" alt="Terracotta head with an astonished expression" loading="lazy" /></div>
+        <figcaption><span class="art-title">Stare of Astonishment</span><span class="art-meta">Terracotta · 53.3 × 27.9 × 34 cm</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/tc-sacred-idol.jpg" alt="Detailed terracotta idol of Ganesha" loading="lazy" /></div>
+        <figcaption><span class="art-title">Sacred Idol</span><span class="art-meta">Terracotta · 30 × 30 × 20 cm</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER IV · CERAMICS ===== -->
+  <section class="chapter" id="ch-ceramics" data-accent="#1f6b7a" data-name="Ceramics" data-num="IV">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">IV</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter IV</p>
+        <h2 class="ch-title"><em>Ceramics</em></h2>
+        <p class="ch-desc">Glaze and kiln-heat turned playful: tiles that echo Harappa, and teapots you can actually pour.</p>
+      </div>
+    </div>
+    <div class="gallery mat-dark">
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/ce-intimation.jpg" alt="Two blue glazed ceramic figures embracing" loading="lazy" /></div>
+        <figcaption><span class="art-title">Essence of Intimation</span><span class="art-meta">Glazed ceramic · 8 × 6 × 6 cm</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/ce-harappa-tiles.jpg" alt="Blue and teal glazed ceramic tile in the style of a Harappan face" loading="lazy" /></div>
+        <figcaption><span class="art-title">Modern Harappa Tiles</span><span class="art-meta">Glazed ceramic tiles · 5 × 5 × 3 cm each</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/ce-bunny-teapot.jpg" alt="Red glazed ceramic teapot shaped like a rabbit" loading="lazy" /></div>
+        <figcaption><span class="art-title">Bunny Tea-pot</span><span class="art-meta">Glazed ceramic · usable teapot · 15.2 × 17.8 × 13 cm</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/ce-camel-coaster.jpg" alt="Camel-shaped ceramic teapot beside a round green coaster" loading="lazy" /></div>
+        <figcaption><span class="art-title">Camel-o-Coaster</span><span class="art-meta">Glazed ceramic · teapot &amp; coaster · 15.2 × 17.8 × 13 cm</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER V · FABRIC ===== -->
+  <section class="chapter" id="ch-fabric" data-accent="#3a4a8c" data-name="Fabric-a" data-num="V">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">V</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter V</p>
+        <h2 class="ch-title"><em>Fabric-a</em></h2>
+        <p class="ch-desc">The canvas becomes cloth — sarees and skirts painted by hand, made to be worn and walked in.</p>
+      </div>
+    </div>
+    <div class="gallery mat-dark">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/fa-saree-deities.jpg" alt="Hand-painted saree showing deities and Devanagari script on a beige ground" loading="lazy" /></div>
+        <figcaption><span class="art-title">Painted Saree — Deities &amp; Script</span><span class="art-meta">Hand-painted · base: saree</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/fa-skirt-procession.jpg" alt="Blue hand-painted skirt with a white-line village procession scene" loading="lazy" /></div>
+        <figcaption><span class="art-title">Painted Skirt — Village Procession</span><span class="art-meta">Hand-painted · base: skirt</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/fa-saree-lotus.jpg" alt="White saree painted with pink lotuses and a stylised face, held open by the artist" loading="lazy" /></div>
+        <figcaption><span class="art-title">Painted Saree — Lotus &amp; Muse</span><span class="art-meta">Hand-painted · base: saree</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/fa-saree-tree.jpg" alt="Grey saree painted with a tree of life and a folk procession, purple and orange border" loading="lazy" /></div>
+        <figcaption><span class="art-title">Painted Saree — Tree of Life</span><span class="art-meta">Hand-painted · base: saree</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER VI · SAND ART ===== -->
+  <section class="chapter" id="ch-sand" data-accent="#1798b5" data-name="Sand Art" data-num="VI">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">VI</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter VI</p>
+        <h2 class="ch-title"><em>Sand Art</em></h2>
+        <p class="ch-desc">Drawn in light and loose grain — alive for a moment, then wiped away by the same hand that made it.</p>
+      </div>
+    </div>
+    <div class="gallery mat-dark">
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/sa-couple.jpg" alt="Sand art of a divine couple rendered in glowing blue on a dark light-table" loading="lazy" /></div>
+        <figcaption><span class="art-title">The Sacred Couple</span><span class="art-meta">Sand on light table · live performance</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/sa-inprogress.jpg" alt="The artist creating a yellow sand-art bird during a live performance" loading="lazy" /></div>
+        <figcaption><span class="art-title">In Performance</span><span class="art-meta">Sand on light table · live performance</span></figcaption>
+      </figure>
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/sa-moon.jpg" alt="Sand art of a woman reaching toward a crescent moon on a glowing light-table" loading="lazy" /></div>
+        <figcaption><span class="art-title">Moonlit Figure</span><span class="art-meta">Sand on light table · live performance</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER VII · ABSTRACT ===== -->
+  <section class="chapter" id="ch-abstract" data-accent="#b0306a" data-name="Abstract" data-num="VII">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">VII</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter VII</p>
+        <h2 class="ch-title"><em>Abstract</em></h2>
+        <p class="ch-desc">Crowded, contradictory and full of eyes — feeling given a shape before it has time to settle.</p>
+      </div>
+    </div>
+    <div class="gallery mat-paper">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/ab-dismay.jpg" alt="Busy abstract painting with chess players, kites and many faces in bright colour" loading="lazy" /></div>
+        <figcaption><span class="art-title">The Art of Dismay</span><span class="art-meta">Mixed media on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/ab-crucifier.jpg" alt="Abstract painting in reds with large eyes and cross-like forms" loading="lazy" /></div>
+        <figcaption><span class="art-title">Crucifier</span><span class="art-meta">Mixed media on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/ab-untitled.jpg" alt="Abstract painting of overlapping coloured profiles holding a yellow flower" loading="lazy" /></div>
+        <figcaption><span class="art-title">Untitled</span><span class="art-meta">Mixed media on paper · A3 (29.7 × 42 cm)</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER VIII · EXHIBITS ===== -->
+  <section class="chapter" id="ch-exhibits" data-accent="#a9701b" data-name="Exhibits" data-num="VIII">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">VIII</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter VIII</p>
+        <h2 class="ch-title"><em>Exhibits</em></h2>
+        <p class="ch-desc">The large statements — a Mumbai local, a national budget, a tribe. India read back to itself.</p>
+      </div>
+    </div>
+    <div class="gallery mat-paper">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/ex-mumbai-local.jpg" alt="Wide framed painting of crowded figures and gods inside a Mumbai local train" loading="lazy" /></div>
+        <figcaption><span class="art-title">Grievance of God in Mumbai Local</span><span class="art-meta">Exhibited work</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/ex-india-budget.jpg" alt="Blue-toned painting with a kite of figures over a dense cityscape" loading="lazy" /></div>
+        <figcaption><span class="art-title">India Budget</span><span class="art-meta">Exhibited work</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/ex-tribal.jpg" alt="Colourful painting of tribal women and fish in green and gold" loading="lazy" /></div>
+        <figcaption><span class="art-title">Tribal</span><span class="art-meta">Exhibited work</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER IX · STAGE DÉCOR ===== -->
+  <section class="chapter" id="ch-stage" data-accent="#c56b86" data-name="Stage Décor" data-num="IX">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">IX</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter IX</p>
+        <h2 class="ch-title"><em>Stage Décor</em></h2>
+        <p class="ch-desc">Whole worlds built to be stood inside — Greek columns, a silver anniversary, a goddess of wisdom.</p>
+      </div>
+    </div>
+    <div class="gallery mat-photo">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/st-athena.jpg" alt="Stage set with a large princess figure framed by pink and silver floral panels" loading="lazy" /></div>
+        <figcaption><span class="art-title">Athena 2020</span><span class="art-meta">Stage décor</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/st-25th.jpg" alt="Anniversary stage with performers in pink and a large 25 Years emblem" loading="lazy" /></div>
+        <figcaption><span class="art-title">25th Anniversary</span><span class="art-meta">Stage décor</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/st-greek.jpg" alt="Stage props of white and gold Greek columns" loading="lazy" /></div>
+        <figcaption><span class="art-title">Greek</span><span class="art-meta">Stage décor</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/st-vistas.jpg" alt="Auditorium stage decorated with a painted tree backdrop, 'Vistas of Career'" loading="lazy" /></div>
+        <figcaption><span class="art-title">Vistas of Career</span><span class="art-meta">Stage décor</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER X · LIVE SIZE ===== -->
+  <section class="chapter" id="ch-livesize" data-accent="#d2691e" data-name="Live Size" data-num="X">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">X</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter X</p>
+        <h2 class="ch-title"><em>Live Size</em></h2>
+        <p class="ch-desc">Art you walk through — a tiger's open jaws, a hand holding a lit idea, the weight of space.</p>
+      </div>
+    </div>
+    <div class="gallery mat-photo">
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/ls-gen-exhibit.jpg" alt="Large colourful floor mural spelling GEN, the artist working on it" loading="lazy" /></div>
+        <figcaption><span class="art-title">Gen. Exhibit</span><span class="art-meta">Large-scale floor installation</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/ls-tiger.jpg" alt="Giant painted tiger cut-out with open jaws, a person standing inside it" loading="lazy" /></div>
+        <figcaption><span class="art-title">Tiger</span><span class="art-meta">Walk-through cut-out installation</span></figcaption>
+      </figure>
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/ls-space.jpg" alt="Large floor painting of astronauts and planets in deep blue space" loading="lazy" /></div>
+        <figcaption><span class="art-title">Space</span><span class="art-meta">Large-scale floor installation</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/ls-nirmaan.jpg" alt="Light installation of a giant bulb held in a hand beside an Einstein E equals m c squared panel" loading="lazy" /></div>
+        <figcaption><span class="art-title">Nirmaan</span><span class="art-meta">Light installation</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER XI · DIGITAL ===== -->
+  <section class="chapter" id="ch-digital" data-accent="#c0392b" data-name="Digital Art" data-num="XI">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">XI</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Chapter XI</p>
+        <h2 class="ch-title"><em>Digital Art</em></h2>
+        <p class="ch-desc">The newest room. Drawn on an iPad — the old motifs return in electric colour.</p>
+      </div>
+    </div>
+    <div class="gallery mat-dark">
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/dg-eye-for-an-eye.jpg" alt="Digital artwork full of fish, faces and watching eyes in warm colour" loading="lazy" /></div>
+        <figcaption><span class="art-title">Eye for an Eye</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/dg-ram-bhakt.jpg" alt="Maroon digital line drawing of a devotee figure with the words Jai Shri Ram" loading="lazy" /></div>
+        <figcaption><span class="art-title">Ram Bhakt</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.08">
+        <div class="frame"><img src="images/dg-vaan-devi.jpg" alt="Digital portrait of a red goddess face with ornate jewellery" loading="lazy" /></div>
+        <figcaption><span class="art-title">Vaan Devi</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.06">
+        <div class="frame"><img src="images/dg-mirror-horizon.jpg" alt="Symmetrical, mandala-like digital artwork of mirrored faces in rich colour" loading="lazy" /></div>
+        <figcaption><span class="art-title">Mirror Horizon</span><span class="art-meta">Digital · drawn on iPad</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== EPILOGUE · WORKSHOPS ===== -->
+  <section class="chapter workshops" id="ch-workshops" data-accent="#c99a2e" data-name="Workshops" data-num="XII">
+    <div class="chapter-head">
+      <span class="ch-num" data-speed="0.10">XII</span>
+      <div class="ch-copy">
+        <p class="eyebrow">Epilogue</p>
+        <h2 class="ch-title"><em>Workshops</em></h2>
+        <p class="ch-desc">And the part that outlasts any single piece — putting the brush into someone else's hand.</p>
+      </div>
+    </div>
+    <div class="gallery mat-photo">
+      <figure class="art wide" data-speed="0.05">
+        <div class="frame"><img src="images/ws-1.jpg" alt="A group of schoolchildren holding up their finished paintings" loading="lazy" /></div>
+        <figcaption><span class="art-title">Young Artists</span><span class="art-meta">Workshop</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/ws-2.jpg" alt="Students painting on paper while seated on a studio floor" loading="lazy" /></div>
+        <figcaption><span class="art-title">On the Studio Floor</span><span class="art-meta">Workshop</span></figcaption>
+      </figure>
+      <figure class="art offset" data-speed="0.07">
+        <div class="frame"><img src="images/ws-3.jpg" alt="Kavita with a visiting student holding a terracotta tile they made" loading="lazy" /></div>
+        <figcaption><span class="art-title">A First Tile</span><span class="art-meta">Terracotta workshop</span></figcaption>
+      </figure>
+      <figure class="art" data-speed="0.09">
+        <div class="frame"><img src="images/ws-4.jpg" alt="Children painting a rainbow onto a white t-shirt at a table" loading="lazy" /></div>
+        <figcaption><span class="art-title">T-shirt Painting</span><span class="art-meta">Workshop</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== CONTACT / FOOTER ===== -->
+<footer class="contact" id="contact" data-accent="#4f7a4a" data-name="Contact" data-num="·">
+  <div class="contact-inner">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="contact-title">Commissions, exhibitions<br />&amp; <em>workshops</em>.</h2>
+    <div class="contact-grid">
+      <ul class="contact-links">
+        <li><span>Email</span><a href="mailto:kavitajha1826@gmail.com">kavitajha1826@gmail.com</a></li>
+        <li><span>Links</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener">linktr.ee/artsbykavitajha</a></li>
+        <li><span>Based in</span>Mumbai · Bangalore</li>
+      </ul>
+      <a class="contact-qr" href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" aria-label="Open Kavita Jha's link page">
+        <img src="images/qr-linktree.jpg" alt="QR code linking to Kavita Jha's link page" loading="lazy" />
+        <span>Scan for everything</span>
+      </a>
+    </div>
+    <p class="colophon">© <span id="year">2026</span> Kavita Jha · All works shown are the artist's own. &nbsp;·&nbsp; Site crafted by Yatharth Jha.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
