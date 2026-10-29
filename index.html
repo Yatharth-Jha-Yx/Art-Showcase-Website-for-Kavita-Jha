@@ -3,6 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F0D0A">
+<style>
+  /* dark is the default; light is opt-in from the switch under MENU */
+  :root{
+    --bg:#0F0D0A;--bg-rgb:15,13,10;--ink:#EDE5D6;--ink-rgb:237,229,214;
+    --mute:#9A9080;--body:#B4AA99;--body2:#C9BFAE;--panel:#16130F;--thumb:#2E2820;--loader:#0C0A08;
+    --accmix:100%;color-scheme:dark;
+  }
+  :root[data-theme="light"]{
+    --bg:#F3ECDF;--bg-rgb:243,236,223;--ink:#211C16;--ink-rgb:33,28,22;
+    --mute:#7D7262;--body:#4F473C;--body2:#5B5246;--panel:#E7DECF;--thumb:#CBBFAC;--loader:#EFE7D9;
+    --accmix:62%;color-scheme:light;
+  }
+  html,body{background:var(--bg);}
+  :root[data-theme="light"] #tw-grain{opacity:.045 !important;mix-blend-mode:multiply;}
+  :root[data-theme="light"] .tw-slideimg,:root[data-theme="light"] .tw-tileframe{box-shadow:0 40px 80px -48px rgba(60,40,20,.45) !important;}
+  html.tw-themeswap,html.tw-themeswap *{transition:background-color .6s ease,color .6s ease,border-color .6s ease,-webkit-text-stroke-color .6s ease !important;}
+</style>
+<script>
+  try { if (localStorage.getItem('kj-theme') === 'light') document.documentElement.setAttribute('data-theme', 'light'); } catch (e) {}
+</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -14,11 +35,11 @@
 <style>
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
-  body{background:#0F0D0A;color:#EDE5D6;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
-  ::selection{background:#E0854A;color:#0F0D0A;}
-  html{scrollbar-width:thin;scrollbar-color:#2E2820 #0F0D0A;}
-  ::-webkit-scrollbar{width:9px;background:#0F0D0A;}
-  ::-webkit-scrollbar-thumb{background:#2E2820;border-radius:9px;}
+  body{background:var(--bg);color:var(--ink);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  ::selection{background:#E0854A;color:var(--bg);}
+  html{scrollbar-width:thin;scrollbar-color:var(--thumb) var(--bg);}
+  ::-webkit-scrollbar{width:9px;background:var(--bg);}
+  ::-webkit-scrollbar-thumb{background:var(--thumb);border-radius:9px;}
   a{color:inherit;text-decoration:none;}
   @keyframes twSpin{to{transform:rotate(360deg)}}
   @keyframes twCue{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(9px);opacity:1}}
@@ -31,12 +52,13 @@
     #tw-flourish{position:relative !important;left:auto !important;top:auto !important;display:block;margin:.5em 0 0 .2em;font-size:clamp(26px,8vw,44px) !important;}
     #tw-now{display:none !important;}
     #tw-track{gap:44px !important;}
+    #tw-email{font-size:4.8vw !important;}
     .tw-slideimg{height:clamp(240px,50svh,520px) !important;max-width:78vw !important;}
   }
 </style>
 </helmet>
 
-<div class="tw-root" style="--acc:#E0854A;position:relative;width:100%;background:#0F0D0A;color:#EDE5D6;">
+<div class="tw-root" style="--acc:#E0854A;position:relative;width:100%;background:var(--bg);color:var(--ink);">
 
   <div id="tw-spacer" style="height:0;"></div>
 
@@ -47,7 +69,7 @@
       <div id="tw-badge" style="position:absolute;top:clamp(78px,11vh,130px);right:clamp(22px,5vw,80px);z-index:3;opacity:.9;">
         <svg width="150" height="150" viewBox="0 0 150 150" style="animation:twSpin 18s linear infinite;display:block;">
           <defs><path id="twCirc" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"></path></defs>
-          <text style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.32em;fill:#9A9080;"><textPath href="#twCirc">THIRTEEN ROOMS &#10022; KAVITA JHA &#10022; EST. MUMBAI </textPath></text>
+          <text style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.32em;fill:var(--mute);"><textPath href="#twCirc">THIRTEEN ROOMS &#10022; KAVITA JHA &#10022; EST. MUMBAI </textPath></text>
           <circle cx="75" cy="75" r="3" fill="var(--acc)"></circle>
         </svg>
       </div>
@@ -56,19 +78,19 @@
         <div id="tw-titlewrap" style="position:relative;transform-style:preserve-3d;will-change:transform;">
           <h1 id="tw-title" aria-label="Kavita Jha" style="margin:0;font-family:'Archivo',sans-serif;font-weight:830;font-stretch:116%;line-height:.8;letter-spacing:-.035em;text-transform:uppercase;font-size:clamp(80px,17.5vw,296px);">
             <span data-hline style="display:block;">KAVITA</span>
-            <span data-hline style="display:block;color:transparent;-webkit-text-stroke:2px #EDE5D6;">JHA</span>
+            <span data-hline style="display:block;color:transparent;-webkit-text-stroke:2px var(--ink);">JHA</span>
           </h1>
           <span id="tw-flourish" data-rv data-rvd="500" data-rvt="rotate(-6deg) translateZ(60px)" style="position:absolute;left:min(42vw,560px);top:56%;z-index:3;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(26px,4.6vw,78px);color:var(--acc);transform:rotate(-6deg);pointer-events:none;white-space:nowrap;">one hand, every medium</span>
         </div>
         <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:26px 40px;margin:clamp(30px,6vh,64px) 0 clamp(28px,5vh,54px);">
           <div data-rv data-rvd="150" style="display:flex;flex-direction:column;gap:10px;">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.28em;color:#9A9080;">61 WORKS &#183; 13 MEDIUMS &#183; MUMBAI &#8594; BANGALORE</span>
-            <span style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.26em;color:#9A9080;"><span style="animation:twCue 2.2s ease-in-out infinite;color:var(--acc);">&#9660;</span> SCROLL TO WALK THE CORRIDOR</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.28em;color:var(--mute);">61 WORKS &#183; 13 MEDIUMS &#183; MUMBAI &#8594; BANGALORE</span>
+            <span style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.26em;color:var(--mute);"><span style="animation:twCue 2.2s ease-in-out infinite;color:var(--acc);">&#9660;</span> SCROLL TO WALK THE CORRIDOR</span>
           </div>
-          <p data-rv data-rvd="300" style="margin:0;max-width:380px;font-size:14px;line-height:1.75;color:#B4AA99;">Watercolour to terracotta, hand-painted sarees to sand drawn in light &#8212; sixty-one works hung in one long corridor. <span id="tw-herocue">Move your mouse. Then scroll.</span></p>
+          <p data-rv data-rvd="300" style="margin:0;max-width:380px;font-size:14px;line-height:1.75;color:var(--body);">Watercolour to terracotta, hand-painted sarees to sand drawn in light &#8212; sixty-one works hung in one long corridor. <span id="tw-herocue">Move your mouse. Then scroll.</span></p>
         </div>
       </div>
-      <div data-marquee style="position:relative;z-index:2;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(237,229,214,.13);border-bottom:1px solid rgba(237,229,214,.13);padding:16px 0;">
+      <div data-marquee style="position:relative;z-index:2;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(var(--ink-rgb),.13);border-bottom:1px solid rgba(var(--ink-rgb),.13);padding:16px 0;">
         <div style="display:inline-flex;align-items:center;gap:3vw;will-change:transform;">
           <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
             <span style="display:inline-flex;align-items:center;gap:3vw;">
@@ -82,30 +104,30 @@
 
     <section id="tw-manifesto" data-accent="#E0B054" data-name="OVERTURE" data-num="&#8212;" data-screen-label="Manifesto" style="position:relative;padding:clamp(130px,20vh,240px) clamp(20px,7vw,140px);max-width:1440px;margin:0 auto;">
       <p id="tw-mani" data-words style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5.4vw,86px);line-height:1.14;letter-spacing:-.01em;">
-        Clay that <em style="font-style:italic;color:var(--acc);">remembers</em>. <img src="./images/ce-bunny-teapot.jpg" alt="Bunny teapot" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:1.333;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(237,229,214,.14);" /> cloth you can <em style="font-style:italic;color:var(--acc);">wear</em>. <img src="./images/fa-saree-lotus.jpg" alt="Painted saree" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:0.563;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(237,229,214,.14);" /> Sand gone by <em style="font-style:italic;color:var(--acc);">morning</em>, <img src="./images/sa-moon.jpg" alt="Sand drawing" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:1.333;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(237,229,214,.14);" /> and rooms you can step <em style="font-style:italic;color:var(--acc);">inside</em>.
+        Clay that <em style="font-style:italic;color:var(--acc);">remembers</em>. <img src="./images/ce-bunny-teapot.jpg" alt="Bunny teapot" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:1.333;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(var(--ink-rgb),.14);" /> cloth you can <em style="font-style:italic;color:var(--acc);">wear</em>. <img src="./images/fa-saree-lotus.jpg" alt="Painted saree" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:0.563;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(var(--ink-rgb),.14);" /> Sand gone by <em style="font-style:italic;color:var(--acc);">morning</em>, <img src="./images/sa-moon.jpg" alt="Sand drawing" loading="lazy" decoding="async" style="display:inline-block;height:clamp(44px,6.5vw,88px);aspect-ratio:1.333;width:auto;object-fit:cover;border-radius:6px;vertical-align:middle;margin:0 .14em;transform:translateY(-6%);border:1px solid rgba(var(--ink-rgb),.14);" /> and rooms you can step <em style="font-style:italic;color:var(--acc);">inside</em>.
       </p>
-      <p data-rv data-rvd="200" style="margin:clamp(34px,6vh,60px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;color:#9A9080;">ONE ARTIST &#8212; THIRTEEN WAYS OF MAKING</p>
+      <p data-rv data-rvd="200" style="margin:clamp(34px,6vh,60px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;color:var(--mute);">ONE ARTIST &#8212; THIRTEEN WAYS OF MAKING</p>
     </section>
 
     <section id="tw-artist" class="tw-2col" data-accent="#AECBB6" data-name="THE ARTIST" data-num="&#10022;" data-screen-label="The Artist" style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,96px);padding:clamp(80px,14vh,170px) clamp(20px,7vw,140px);max-width:1520px;margin:0 auto;align-items:center;">
       <div>
-        <div data-rv data-cursor="view" style="position:relative;overflow:hidden;border-radius:4px;border:1px solid rgba(237,229,214,.12);background:#16130F;aspect-ratio:0.75;box-shadow:0 60px 120px -60px rgba(0,0,0,.85);">
+        <div data-rv data-cursor="view" style="position:relative;overflow:hidden;border-radius:4px;border:1px solid rgba(var(--ink-rgb),.12);background:var(--panel);aspect-ratio:0.75;box-shadow:0 60px 120px -60px rgba(0,0,0,.85);">
           <img id="tw-portrait" src="./images/artist-portrait.jpg" alt="Kavita Jha &#8212; artist portrait" loading="lazy" decoding="async" style="width:100%;height:118%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);transition:filter .8s ease;will-change:transform;" />
         </div>
-        <div style="display:flex;justify-content:space-between;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.24em;color:#9A9080;">
+        <div style="display:flex;justify-content:space-between;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.24em;color:var(--mute);">
           <span>KAVITA JHA</span><span>THE ARTIST</span>
         </div>
       </div>
       <div>
         <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 26px;">01 &#8212; THE ARTIST</p>
         <h2 data-split style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(32px,3.8vw,58px);line-height:1.14;margin:0 0 28px;letter-spacing:-.01em;">A hand that refuses to settle on a <em style="font-style:italic;color:var(--acc);">single material</em>.</h2>
-        <p data-rv data-rvd="100" style="font-size:clamp(14px,1.15vw,17px);line-height:1.8;color:#B4AA99;margin:0 0 18px;max-width:560px;">Watercolour and terracotta, glazed ceramics and hand-painted cloth, sand drawn in light, the digital tablet, and installations large enough to walk through &#8212; Kavita Jha&#8217;s work moves freely across all of them, held together by a recurring cast of faces, gods, fish and many watching eyes.</p>
-        <p data-rv data-rvd="200" style="font-size:clamp(14px,1.15vw,17px);line-height:1.8;color:#B4AA99;margin:0 0 36px;max-width:560px;">What follows is one long corridor through that body of work, medium by medium. Take it slowly.</p>
-        <div data-rv data-rvd="300" style="display:flex;flex-wrap:wrap;gap:22px 54px;border-top:1px solid rgba(237,229,214,.13);padding-top:26px;">
-          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">BASED IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;">Mumbai &amp; Bangalore</span></div>
-          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">WORKING IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;">Every medium she can reach</span></div>
+        <p data-rv data-rvd="100" style="font-size:clamp(14px,1.15vw,17px);line-height:1.8;color:var(--body);margin:0 0 18px;max-width:560px;">Watercolour and terracotta, glazed ceramics and hand-painted cloth, sand drawn in light, the digital tablet, and installations large enough to walk through &#8212; Kavita Jha&#8217;s work moves freely across all of them, held together by a recurring cast of faces, gods, fish and many watching eyes.</p>
+        <p data-rv data-rvd="200" style="font-size:clamp(14px,1.15vw,17px);line-height:1.8;color:var(--body);margin:0 0 36px;max-width:560px;">What follows is one long corridor through that body of work, medium by medium. Take it slowly.</p>
+        <div data-rv data-rvd="300" style="display:flex;flex-wrap:wrap;gap:22px 54px;border-top:1px solid rgba(var(--ink-rgb),.13);padding-top:26px;">
+          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:var(--mute);">BASED IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;">Mumbai &amp; Bangalore</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:var(--mute);">WORKING IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;">Every medium she can reach</span></div>
         </div>
-        <a data-mag data-rv data-rvd="400" data-cursor="link" href="mailto:kavitajha1826@gmail.com" style="display:inline-flex;align-items:center;gap:12px;margin-top:36px;border:1px solid rgba(237,229,214,.22);border-radius:999px;padding:16px 30px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.28em;">WRITE TO KAVITA <span style="color:var(--acc);">&#8599;</span></a>
+        <a data-mag data-rv data-rvd="400" data-cursor="link" href="mailto:kavitajha1826@gmail.com" style="display:inline-flex;align-items:center;gap:12px;margin-top:36px;border:1px solid rgba(var(--ink-rgb),.22);border-radius:999px;padding:16px 30px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.28em;">WRITE TO KAVITA <span style="color:var(--acc);">&#8599;</span></a>
       </div>
     </section>
 
@@ -116,7 +138,7 @@
             <div style="flex:none;max-width:min(84vw,560px);display:flex;flex-direction:column;gap:20px;">
               <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0;">SELECTED WORKS</p>
               <h2 data-split style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:clamp(44px,5.6vw,96px);line-height:.98;letter-spacing:-.01em;">Ten pieces, ten rooms.</h2>
-              <p id="tw-selcue" style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:#9A9080;">KEEP SCROLLING &#8212; THE CORRIDOR TURNS SIDEWAYS &#8594;</p>
+              <p id="tw-selcue" style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:var(--mute);">KEEP SCROLLING &#8212; THE CORRIDOR TURNS SIDEWAYS &#8594;</p>
             </div>
             <sc-for list="{{ selected }}" as="art" hint-placeholder-count="10">
               <figure class="tw-slide" data-lb data-group="sel" data-slot="{{ art.slot }}" data-title="{{ art.title }}" data-meta="{{ art.meta }}" data-roomname="{{ art.room }}" data-acc="{{ art.accent }}" data-cursor="view" style="{{ art.figStyle }}">
@@ -126,18 +148,18 @@
                 </div>
                 <figcaption style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 20px;margin-top:18px;">
                   <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(19px,1.8vw,28px);">{{ art.title }}</span>
-                  <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#9A9080;text-transform:uppercase;">{{ art.meta }}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase;">{{ art.meta }}</span>
                   <span style="{{ art.chipStyle }}">{{ art.roomUpper }}</span>
                 </figcaption>
               </figure>
             </sc-for>
             <div style="flex:none;max-width:min(84vw,520px);display:flex;flex-direction:column;align-items:flex-start;gap:26px;padding-right:clamp(20px,7vw,120px);">
               <p style="margin:0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(32px,3.8vw,60px);line-height:1.05;">That was the short walk.</p>
-              <button id="tw-openrooms" data-mag data-cursor="link" style="background:none;border:1px solid rgba(237,229,214,.22);border-radius:999px;padding:16px 30px;color:inherit;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.28em;cursor:pointer;">OPEN THE TWELVE ROOMS <span style="color:var(--acc);">&#8595;</span></button>
+              <button id="tw-openrooms" data-mag data-cursor="link" style="background:none;border:1px solid rgba(var(--ink-rgb),.22);border-radius:999px;padding:16px 30px;color:inherit;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.28em;cursor:pointer;">OPEN THE TWELVE ROOMS <span style="color:var(--acc);">&#8595;</span></button>
             </div>
           </div>
-          <div id="tw-selhud" style="position:absolute;left:clamp(20px,7vw,120px);bottom:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;"><span id="tw-selidx" style="color:var(--acc);">01</span><span style="color:#9A9080;"> / 10</span></div>
-          <div id="tw-selbarwrap" style="position:absolute;right:clamp(20px,7vw,120px);bottom:31px;width:clamp(110px,17vw,300px);height:1px;background:rgba(237,229,214,.15);"><div id="tw-selbar" style="height:1px;width:0%;background:var(--acc);"></div></div>
+          <div id="tw-selhud" style="position:absolute;left:clamp(20px,7vw,120px);bottom:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;"><span id="tw-selidx" style="color:var(--acc);">01</span><span style="color:var(--mute);"> / 10</span></div>
+          <div id="tw-selbarwrap" style="position:absolute;right:clamp(20px,7vw,120px);bottom:31px;width:clamp(110px,17vw,300px);height:1px;background:rgba(var(--ink-rgb),.15);"><div id="tw-selbar" style="height:1px;width:0%;background:var(--acc);"></div></div>
         </div>
       </div>
     </section>
@@ -145,14 +167,14 @@
     <section id="tw-rooms" data-accent="#E0854A" data-name="THE THIRTEEN ROOMS" data-num="&#10022;" data-screen-label="The Thirteen Rooms" style="position:relative;padding:clamp(120px,18vh,220px) clamp(20px,6vw,110px) clamp(60px,10vh,120px);max-width:1640px;margin:0 auto;">
       <p data-rv style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.35em;color:var(--acc);margin:0 0 18px;">THE COLLECTION</p>
       <h2 data-split style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:clamp(52px,9vw,150px);line-height:.95;letter-spacing:-.015em;">The Thirteen Rooms</h2>
-      <p data-rv data-rvd="150" style="margin:clamp(20px,3.5vh,34px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:#9A9080;">TAP A ROOM TO OPEN IT &#8212; EVERY WORK LIVES INSIDE</p>
+      <p data-rv data-rvd="150" style="margin:clamp(20px,3.5vh,34px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.26em;color:var(--mute);">TAP A ROOM TO OPEN IT &#8212; EVERY WORK LIVES INSIDE</p>
 
-      <div style="margin-top:clamp(46px,8vh,90px);border-bottom:1px solid rgba(237,229,214,.13);">
+      <div style="margin-top:clamp(46px,8vh,90px);border-bottom:1px solid rgba(var(--ink-rgb),.13);">
         <sc-for list="{{ rooms }}" as="room" hint-placeholder-count="12">
           <div class="tw-row" data-accent="{{ room.accent }}" data-name="{{ room.nameUpper }}" data-num="{{ room.num }}" data-rid="{{ room.id }}" data-screen-label="{{ room.name }}">
-            <button class="tw-rowbtn" data-cursor="open" aria-expanded="false" style="position:relative;display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid rgba(237,229,214,.13);color:inherit;padding:0;cursor:pointer;font:inherit;">
+            <button class="tw-rowbtn" data-cursor="open" aria-expanded="false" style="position:relative;display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid rgba(var(--ink-rgb),.13);color:inherit;padding:0;cursor:pointer;font:inherit;">
               <div class="tw-rowfill" style="position:absolute;inset:0;background:{{ room.accent }};transform:scaleY(0);transform-origin:bottom;transition:transform .5s cubic-bezier(.76,0,.24,1);"></div>
-              <div class="tw-rowin" style="position:relative;display:grid;grid-template-columns:clamp(44px,5vw,80px) 1fr auto;align-items:center;gap:clamp(12px,2.6vw,38px);padding:clamp(20px,3.2vh,36px) clamp(6px,1vw,16px);color:#EDE5D6;transition:color .35s ease;">
+              <div class="tw-rowin" style="position:relative;display:grid;grid-template-columns:clamp(44px,5vw,80px) 1fr auto;align-items:center;gap:clamp(12px,2.6vw,38px);padding:clamp(20px,3.2vh,36px) clamp(6px,1vw,16px);color:var(--ink);transition:color .35s ease;">
                 <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;opacity:.55;">{{ room.num }}</span>
                 <span style="display:flex;align-items:baseline;gap:clamp(14px,2.4vw,34px);min-width:0;">
                   <span class="tw-rowname" style="font-family:'Instrument Serif',serif;font-size:clamp(34px,5.4vw,90px);line-height:1;letter-spacing:-.015em;transition:transform .5s cubic-bezier(.16,1,.3,1);white-space:nowrap;">{{ room.name }}</span>
@@ -166,7 +188,7 @@
             </button>
             <div class="tw-panel" style="height:0;overflow:hidden;transition:height .8s cubic-bezier(.76,0,.24,1);">
               <div style="padding:clamp(8px,1.6vh,20px) clamp(6px,1vw,16px) clamp(44px,7vh,80px);">
-                <p style="margin:0 0 clamp(26px,4vh,40px);font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:#C9BFAE;max-width:640px;">{{ room.desc }}</p>
+                <p style="margin:0 0 clamp(26px,4vh,40px);font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:var(--body2);max-width:640px;">{{ room.desc }}</p>
                 <div class="tw-grid" style="column-width:300px;column-gap:clamp(18px,2.4vw,36px);">
                   <sc-for list="{{ room.items }}" as="art" hint-placeholder-count="4">
                     <figure class="tw-tile" data-rv data-rvd="{{ art.rvd }}" data-lb data-group="{{ room.id }}" data-slot="{{ art.slot }}" data-title="{{ art.title }}" data-meta="{{ art.meta }}" data-roomname="{{ room.name }}" data-acc="{{ room.accent }}" data-cursor="view" style="break-inside:avoid;margin:0 0 clamp(24px,3vw,42px);display:flex;flex-direction:column;gap:12px;">
@@ -175,7 +197,7 @@
                       </div>
                       <figcaption style="display:flex;flex-direction:column;gap:4px;">
                         <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:17px;line-height:1.25;">{{ art.title }}</span>
-                        <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;color:#9A9080;text-transform:uppercase;">{{ art.meta }}</span>
+                        <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase;">{{ art.meta }}</span>
                       </figcaption>
                     </figure>
                   </sc-for>
@@ -188,7 +210,7 @@
     </section>
 
     <footer id="tw-contact" data-accent="#E0854A" data-name="CONTACT" data-num="&#10022;" data-screen-label="Contact" style="position:relative;">
-      <div data-marquee style="overflow:hidden;white-space:nowrap;border-top:1px solid rgba(237,229,214,.13);border-bottom:1px solid rgba(237,229,214,.13);padding:16px 0;">
+      <div data-marquee style="overflow:hidden;white-space:nowrap;border-top:1px solid rgba(var(--ink-rgb),.13);border-bottom:1px solid rgba(var(--ink-rgb),.13);padding:16px 0;">
         <div style="display:inline-flex;align-items:center;gap:3vw;will-change:transform;">
           <sc-for list="{{ marquee2 }}" as="m" hint-placeholder-count="4">
             <span style="display:inline-flex;align-items:center;gap:3vw;">
@@ -205,12 +227,12 @@
           KAVITAJHA1826@GMAIL.COM
           <span id="tw-emailline" style="position:absolute;left:0;right:0;bottom:-10px;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.16,1,.3,1);display:block;"></span>
         </a>
-        <div data-rv style="margin-top:clamp(60px,10vh,110px);border-top:1px solid rgba(237,229,214,.13);padding-top:clamp(30px,5vh,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px;align-items:start;">
-          <div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">ELSEWHERE</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="link" style-hover="color:var(--acc)" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;transition:color .3s ease;">linktr.ee/artsbykavitajha &#8599;</a></div>
-          <div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">BASED IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;">Mumbai &#183; Bangalore</span></div>
-          <div style="display:flex;flex-direction:column;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:#9A9080;">EVERYTHING, ONE SCAN</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="view" style="display:block;width:112px;"><img src="./images/qr-linktree.jpg" alt="QR code &#8212; Kavita Jha's links" loading="lazy" style="width:100%;display:block;border-radius:6px;border:1px solid rgba(237,229,214,.16);" /></a></div>
+        <div data-rv style="margin-top:clamp(60px,10vh,110px);border-top:1px solid rgba(var(--ink-rgb),.13);padding-top:clamp(30px,5vh,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px;align-items:start;">
+          <div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:var(--mute);">ELSEWHERE</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="link" style-hover="color:var(--acc)" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;transition:color .3s ease;">linktr.ee/artsbykavitajha &#8599;</a></div>
+          <div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:var(--mute);">BASED IN</span><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;">Mumbai &#183; Bangalore</span></div>
+          <div style="display:flex;flex-direction:column;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.24em;color:var(--mute);">EVERYTHING, ONE SCAN</span><a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="view" style="display:block;width:112px;"><img src="./images/qr-linktree.jpg" alt="QR code &#8212; Kavita Jha's links" loading="lazy" style="width:100%;display:block;border-radius:6px;border:1px solid rgba(var(--ink-rgb),.16);" /></a></div>
         </div>
-        <div style="margin-top:clamp(60px,9vh,100px);border-top:1px solid rgba(237,229,214,.13);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;color:#9A9080;">
+        <div style="margin-top:clamp(60px,9vh,100px);border-top:1px solid rgba(var(--ink-rgb),.13);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;color:var(--mute);">
           <span>&#169; {{ year }} KAVITA JHA &#8212; ALL WORKS THE ARTIST&#8217;S OWN</span>
           <span>SITE BY YATHARTH JHA</span>
         </div>
@@ -221,30 +243,36 @@
 
   <div id="tw-grain" style="position:fixed;inset:-60px;z-index:66;pointer-events:none;opacity:.07;"></div>
 
-  <header id="tw-topbar" style="position:fixed;top:0;left:0;right:0;z-index:72;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,3vw,44px);mix-blend-mode:difference;color:#EDE5D6;">
+  <header id="tw-topbar" style="position:fixed;top:0;left:0;right:0;z-index:72;display:flex;justify-content:space-between;align-items:flex-start;padding:18px clamp(18px,3vw,44px);mix-blend-mode:difference;color:#EDE5D6;">
     <button id="tw-mark" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;">KAVITA JHA &#10022; THIRTEEN ROOMS</button>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
     <button id="tw-menubtn" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;">MENU<span style="display:flex;flex-direction:column;gap:5px;"><span style="display:block;width:26px;height:1px;background:currentColor;"></span><span style="display:block;width:26px;height:1px;background:currentColor;"></span></span></button>
+    <button id="tw-themebtn" data-cursor="link" aria-label="Switch to light mode" style="background:none;border:1px solid currentColor;border-radius:999px;padding:6px 11px 6px 9px;color:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.26em;opacity:.8;">
+      <span aria-hidden="true" style="display:block;width:9px;height:9px;border:1px solid currentColor;border-radius:50%;background:linear-gradient(90deg,currentColor 50%,transparent 50%);"></span>
+      <span id="tw-themelabel">LIGHT</span>
+    </button>
+    </div>
   </header>
 
   <div id="tw-progress" style="position:fixed;top:0;left:0;height:2px;width:0%;background:var(--acc);z-index:75;"></div>
 
   <div id="tw-now" style="position:fixed;left:clamp(18px,3vw,44px);bottom:22px;z-index:70;display:flex;align-items:baseline;gap:12px;font-family:'IBM Plex Mono',monospace;transition:opacity .5s ease;">
     <span id="tw-now-num" style="font-size:11px;color:var(--acc);letter-spacing:.14em;">00</span>
-    <span style="display:block;width:30px;height:1px;background:rgba(237,229,214,.25);"></span>
-    <span id="tw-now-name" style="font-size:9.5px;letter-spacing:.26em;color:#9A9080;">COVER</span>
+    <span style="display:block;width:30px;height:1px;background:rgba(var(--ink-rgb),.25);"></span>
+    <span id="tw-now-name" style="font-size:9.5px;letter-spacing:.26em;color:var(--mute);">COVER</span>
   </div>
 
-  <button id="tw-totop" data-mag data-cursor="link" aria-label="Back to top" style="position:fixed;right:clamp(18px,3vw,44px);bottom:20px;z-index:70;width:50px;height:50px;border-radius:50%;border:1px solid rgba(237,229,214,.22);background:rgba(15,13,10,.5);backdrop-filter:blur(8px);color:#EDE5D6;font-family:'Instrument Serif',serif;font-size:18px;cursor:pointer;opacity:0;transform:translateY(14px);transition:opacity .4s ease;">&#8593;</button>
+  <button id="tw-totop" data-mag data-cursor="link" aria-label="Back to top" style="position:fixed;right:clamp(18px,3vw,44px);bottom:20px;z-index:70;width:50px;height:50px;border-radius:50%;border:1px solid rgba(var(--ink-rgb),.22);background:rgba(var(--bg-rgb),.5);backdrop-filter:blur(8px);color:var(--ink);font-family:'Instrument Serif',serif;font-size:18px;cursor:pointer;opacity:0;transform:translateY(14px);transition:opacity .4s ease;">&#8593;</button>
 
   <div id="tw-follow" style="position:fixed;top:0;left:0;z-index:68;width:min(300px,26vw);pointer-events:none;opacity:0;transform:translate(-50%,-56%) scale(.92) rotate(2deg);transition:opacity .25s ease;">
-    <div id="tw-follow-frame" style="overflow:hidden;border-radius:6px;border:1px solid rgba(237,229,214,.2);box-shadow:0 40px 90px -35px rgba(0,0,0,.9);aspect-ratio:1;background:#16130F;">
+    <div id="tw-follow-frame" style="overflow:hidden;border-radius:6px;border:1px solid rgba(var(--ink-rgb),.2);box-shadow:0 40px 90px -35px rgba(0,0,0,.9);aspect-ratio:1;background:var(--panel);">
       <img id="tw-follow-img" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
     </div>
   </div>
 
-  <div id="tw-menu" style="position:fixed;inset:0;z-index:90;background:rgba(12,10,7,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);clip-path:inset(0 0 100% 0);visibility:hidden;display:flex;flex-direction:column;padding:clamp(18px,3vw,44px);">
+  <div id="tw-menu" style="position:fixed;inset:0;z-index:90;background:rgba(var(--bg-rgb),.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);clip-path:inset(0 0 100% 0);visibility:hidden;display:flex;flex-direction:column;padding:clamp(18px,3vw,44px);">
     <div style="display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;color:#9A9080;">KAVITA JHA &#10022; THIRTEEN ROOMS</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;color:var(--mute);">KAVITA JHA &#10022; THIRTEEN ROOMS</span>
       <button id="tw-menuclose" data-cursor="link" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.32em;">CLOSE &#10005;</button>
     </div>
     <div class="tw-2col" id="tw-menumid" style="flex:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,6vw,90px);align-items:center;min-height:0;">
@@ -257,50 +285,50 @@
         </sc-for>
       </nav>
       <div id="tw-menuright" style="display:flex;flex-direction:column;gap:26px;min-height:0;">
-        <div style="overflow:hidden;border-radius:5px;border:1px solid rgba(237,229,214,.16);aspect-ratio:0.82;max-height:38vh;background:#16130F;">
+        <div style="overflow:hidden;border-radius:5px;border:1px solid rgba(var(--ink-rgb),.16);aspect-ratio:0.82;max-height:38vh;background:var(--panel);">
           <img id="tw-menuprev" src="./images/artist-portrait.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease,transform .6s ease;" />
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px 20px;">
           <sc-for list="{{ rooms }}" as="room" hint-placeholder-count="12">
-            <button class="tw-mroom" data-rid="{{ room.id }}" data-cursor="link" style-hover="color:var(--acc)" style="background:none;border:none;padding:0;cursor:pointer;text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#9A9080;transition:color .25s ease;">{{ room.num }} &#8212; {{ room.nameUpper }}</button>
+            <button class="tw-mroom" data-rid="{{ room.id }}" data-cursor="link" style-hover="color:var(--acc)" style="background:none;border:none;padding:0;cursor:pointer;text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:var(--mute);transition:color .25s ease;">{{ room.num }} &#8212; {{ room.nameUpper }}</button>
           </sc-for>
         </div>
       </div>
     </div>
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 30px;">
       <a href="mailto:kavitajha1826@gmail.com" data-cursor="link" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:var(--acc);">KAVITAJHA1826@GMAIL.COM</a>
-      <a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="link" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:#9A9080;">LINKTR.EE/ARTSBYKAVITAJHA &#8599;</a>
+      <a href="https://linktr.ee/artsbykavitajha" target="_blank" rel="noopener" data-cursor="link" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:var(--mute);">LINKTR.EE/ARTSBYKAVITAJHA &#8599;</a>
     </div>
   </div>
 
-  <div id="tw-lb" style="position:fixed;inset:0;z-index:95;background:rgba(9,7,5,.96);opacity:0;visibility:hidden;transition:opacity .45s ease;display:flex;flex-direction:column;padding:clamp(14px,2.5vw,36px);">
+  <div id="tw-lb" style="position:fixed;inset:0;z-index:95;background:rgba(var(--bg-rgb),.96);opacity:0;visibility:hidden;transition:opacity .45s ease;display:flex;flex-direction:column;padding:clamp(14px,2.5vw,36px);">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;">
       <span id="tw-lb-room" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--acc);">ROOM</span>
       <span style="display:flex;align-items:center;gap:26px;">
-        <span id="tw-lb-count" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;color:#9A9080;">01 / 01</span>
+        <span id="tw-lb-count" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--mute);">01 / 01</span>
         <button id="tw-lb-close" data-cursor="link" aria-label="Close" style="background:none;border:none;padding:0;color:inherit;cursor:pointer;font-family:'Instrument Serif',serif;font-size:28px;line-height:1;">&#10005;</button>
       </span>
     </div>
     <div style="flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;padding:14px 0;">
       <img id="tw-lb-img" alt="" style="max-width:min(88vw,1300px);max-height:100%;width:auto;height:auto;object-fit:contain;display:block;border-radius:3px;box-shadow:0 60px 130px -50px rgba(0,0,0,.95);" />
-      <button id="tw-lb-prev" data-cursor="link" aria-label="Previous work" style="position:absolute;left:2px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(237,229,214,.25);background:rgba(15,13,10,.55);color:#EDE5D6;font-family:'Instrument Serif',serif;font-size:26px;cursor:pointer;">&#8249;</button>
-      <button id="tw-lb-next" data-cursor="link" aria-label="Next work" style="position:absolute;right:2px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(237,229,214,.25);background:rgba(15,13,10,.55);color:#EDE5D6;font-family:'Instrument Serif',serif;font-size:26px;cursor:pointer;">&#8250;</button>
+      <button id="tw-lb-prev" data-cursor="link" aria-label="Previous work" style="position:absolute;left:2px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(var(--ink-rgb),.25);background:rgba(var(--bg-rgb),.55);color:var(--ink);font-family:'Instrument Serif',serif;font-size:26px;cursor:pointer;">&#8249;</button>
+      <button id="tw-lb-next" data-cursor="link" aria-label="Next work" style="position:absolute;right:2px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(var(--ink-rgb),.25);background:rgba(var(--bg-rgb),.55);color:var(--ink);font-family:'Instrument Serif',serif;font-size:26px;cursor:pointer;">&#8250;</button>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px 26px;">
       <span id="tw-lb-title" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(18px,2.2vw,30px);">&#8212;</span>
-      <span id="tw-lb-meta" style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#9A9080;text-transform:uppercase;">&#8212;</span>
+      <span id="tw-lb-meta" style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase;">&#8212;</span>
     </div>
   </div>
 
   <div id="tw-cur-ring" style="position:fixed;top:0;left:0;width:34px;height:34px;border:1px solid var(--acc);border-radius:50%;z-index:100;pointer-events:none;opacity:0;display:flex;align-items:center;justify-content:center;background:transparent;transition:width .3s cubic-bezier(.16,1,.3,1),height .3s cubic-bezier(.16,1,.3,1),background-color .3s ease,opacity .3s ease;">
-    <span id="tw-cur-label" style="font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.24em;color:#0F0D0A;opacity:0;transition:opacity .2s ease;">VIEW</span>
+    <span id="tw-cur-label" style="font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.24em;color:var(--bg);opacity:0;transition:opacity .2s ease;">VIEW</span>
   </div>
   <div id="tw-cur-dot" style="position:fixed;top:0;left:0;width:5px;height:5px;background:var(--acc);border-radius:50%;z-index:101;pointer-events:none;opacity:0;transition:opacity .3s ease;"></div>
 
-  <div id="tw-loader" style="position:fixed;inset:0;z-index:110;background:#0C0A08;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3.5vh,32px);">
-    <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.4em;color:#9A9080;animation:twPulse 2s ease-in-out infinite;">AN EXHIBITION IN THIRTEEN ROOMS</span>
-    <div id="tw-count" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(96px,19vw,210px);line-height:1;color:#EDE5D6;">0</div>
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5em;color:#9A9080;">
+  <div id="tw-loader" style="position:fixed;inset:0;z-index:110;background:var(--loader);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3.5vh,32px);">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.4em;color:var(--mute);animation:twPulse 2s ease-in-out infinite;">AN EXHIBITION IN THIRTEEN ROOMS</span>
+    <div id="tw-count" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(96px,19vw,210px);line-height:1;color:var(--ink);">0</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5em;color:var(--mute);">
       <span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">K</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">A</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">V</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">I</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">T</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">A</span></span><span style="display:inline-block;width:.6em;"></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">J</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">H</span></span><span style="display:inline-block;overflow:hidden;vertical-align:bottom;"><span class="tw-lname" style="display:inline-block;transform:translateY(130%);">A</span></span>
     </div>
     <div id="tw-loadbar" style="position:absolute;bottom:0;left:0;height:2px;width:0%;background:var(--acc);"></div>
@@ -439,7 +467,7 @@ class Component extends DCLogic {
         return {
           ...a,
           rvd: String((j % 6) * 70),
-          frameStyle: { position: 'relative', overflow: 'hidden', borderRadius: '3px', background: '#16130F', border: '1px solid rgba(237,229,214,.12)', aspectRatio: String(tr), transition: 'border-color .5s ease' },
+          frameStyle: { position: 'relative', overflow: 'hidden', borderRadius: '3px', background: 'var(--panel)', border: '1px solid rgba(var(--ink-rgb),.12)', aspectRatio: String(tr), transition: 'border-color .5s ease' },
           imgStyle: { width: '100%', height: '100%', objectFit: 'contain', display: 'block', transition: 'transform 1.1s cubic-bezier(.16,1,.3,1)', willChange: 'transform' },
         };
       }),
@@ -464,7 +492,7 @@ class Component extends DCLogic {
       figStyle: { position: 'relative', flex: 'none', display: 'flex', flexDirection: 'column', marginTop: i % 2 ? '7vh' : '-5vh', cursor: 'pointer' },
       ghostStyle: { position: 'absolute', top: 'clamp(-88px,-6.5vw,-34px)', left: '-0.04em', fontFamily: "'Instrument Serif',serif", fontStyle: 'italic', fontSize: 'clamp(66px,8.4vw,150px)', lineHeight: 1, color: accent, opacity: 0.3, zIndex: 0, pointerEvents: 'none' },
       imgStyle: { height: 'clamp(280px,56vh,620px)', aspectRatio: String(r), width: 'auto', maxWidth: '80vw', objectFit: 'contain', display: 'block', borderRadius: '3px', boxShadow: '0 50px 110px -55px rgba(0,0,0,.9)' },
-      chipStyle: { fontFamily: MONO, fontSize: '9px', letterSpacing: '.22em', padding: '6px 12px', border: '1px solid ' + accent, color: accent, borderRadius: '999px', whiteSpace: 'nowrap' },
+      chipStyle: { fontFamily: MONO, fontSize: '9px', letterSpacing: '.22em', padding: '6px 12px', border: '1px solid currentColor', color: `color-mix(in srgb, ${accent} var(--accmix), #2A1A0C)`, borderRadius: '999px', whiteSpace: 'nowrap' },
     }));
     const menuLinks = [
       { num: '00', label: 'Overture', target: 'tw-hero', preview: 'ex-mumbai-local' },
@@ -510,7 +538,12 @@ class Component extends DCLogic {
 
     // ---------- accent ----------
     let accCur = this.hexToRgb('#E0854A'), accTar = { ...accCur };
-    const setAcc = () => root.style.setProperty('--acc', `rgb(${accCur.r | 0},${accCur.g | 0},${accCur.b | 0})`);
+    // light theme deepens the accent (via --accmix) so pastels stay readable on paper
+    const MIX = CSS.supports('color', 'color-mix(in srgb, red 50%, blue)');
+    const setAcc = () => {
+      const c = `rgb(${accCur.r | 0},${accCur.g | 0},${accCur.b | 0})`;
+      root.style.setProperty('--acc', MIX ? `color-mix(in srgb, ${c} var(--accmix), #2A1A0C)` : c);
+    };
     setAcc();
 
     // ---------- scroll plane ----------
@@ -534,7 +567,7 @@ class Component extends DCLogic {
         const kind = hit && hit.getAttribute ? (hit.getAttribute('data-cursor') || 'link') : null;
         if (kind === 'view' || kind === 'open') {
           ring.style.width = '72px'; ring.style.height = '72px';
-          ring.style.backgroundColor = 'rgba(237,229,214,.92)';
+          ring.style.backgroundColor = 'rgba(var(--ink-rgb),.92)';
           curLabel.textContent = kind === 'view' ? 'VIEW' : 'OPEN';
           curLabel.style.opacity = '1';
         } else if (kind) {
@@ -828,7 +861,7 @@ class Component extends DCLogic {
       });
       btn.addEventListener('mouseleave', () => {
         fill.style.transform = 'scaleY(0)';
-        inner.style.color = '#EDE5D6';
+        inner.style.color = 'var(--ink)';
         name.style.transform = 'translateX(0)';
         follow.style.opacity = '0';
         follow.style.transform = 'translate(-50%,-56%) scale(.92) rotate(2deg)';
@@ -842,7 +875,7 @@ class Component extends DCLogic {
       const img = f.querySelector('img');
       if (frame) frame.style.transition = 'border-color .5s ease, transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s ease';
       f.addEventListener('mouseenter', () => {
-        if (frame) { frame.style.borderColor = f.getAttribute('data-acc') || '#EDE5D6'; frame.style.boxShadow = '0 34px 70px -30px rgba(0,0,0,.85)'; }
+        if (frame) { frame.style.borderColor = f.getAttribute('data-acc') || 'var(--ink)'; frame.style.boxShadow = '0 34px 70px -30px rgba(0,0,0,.85)'; }
         if (img && frame) img.style.transform = 'scale(1.05)';
       });
       if (frame && !isTouch && !calm) {
@@ -854,7 +887,7 @@ class Component extends DCLogic {
         });
       }
       f.addEventListener('mouseleave', () => {
-        if (frame) { frame.style.borderColor = 'rgba(237,229,214,.12)'; frame.style.transform = ''; frame.style.boxShadow = ''; }
+        if (frame) { frame.style.borderColor = 'rgba(var(--ink-rgb),.12)'; frame.style.transform = ''; frame.style.boxShadow = ''; }
         if (img) img.style.transform = 'scale(1)';
       });
     });
@@ -990,6 +1023,27 @@ class Component extends DCLogic {
       }
     };
     window.addEventListener('mousemove', this._onMove);
+
+    // ---------- light / dark ----------
+    const themeBtn = $('#tw-themebtn'), themeLabel = $('#tw-themelabel');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const showTheme = () => {
+      const light = document.documentElement.getAttribute('data-theme') === 'light';
+      themeLabel.textContent = light ? 'DARK' : 'LIGHT';
+      themeBtn.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+      if (themeMeta) themeMeta.setAttribute('content', light ? '#F3ECDF' : '#0F0D0A');
+    };
+    showTheme();
+    themeBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const light = html.getAttribute('data-theme') !== 'light';
+      html.classList.add('tw-themeswap');
+      if (light) html.setAttribute('data-theme', 'light'); else html.removeAttribute('data-theme');
+      try { localStorage.setItem('kj-theme', light ? 'light' : 'dark'); } catch (e) {}
+      showTheme();
+      clearTimeout(this._swapT);
+      this._swapT = setTimeout(() => html.classList.remove('tw-themeswap'), 700);
+    });
     if (isTouch) {
       // phones: dragging a finger over the cover leaves the same trail of artworks
       const herocue = $('#tw-herocue'); if (herocue) herocue.textContent = 'Drag a finger across the cover. Then scroll.';
